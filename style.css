@@ -1,24 +1,8 @@
-.aprobada {
-    opacity: 0.3;
-}
-
-.flecha-cuerpo-regularizada {
-    stroke: darksalmon;
-}
-.flecha-punta-regularizada {
-    stroke: darksalmon;
-    fill: darksalmon;
-}
-
-.regularizada {
-    fill: darksalmon;
-}
-
 .flecha-cuerpo-regularizable {
     stroke: gold;
 }
 
-.flecha-cuerpo-regularizable {
+.flecha-punta-regularizable {
     stroke: gold;
     fill: gold;
 }
@@ -38,6 +22,22 @@
 
 .aprobable {
     fill: lightgreen;
+}
+
+.flecha-cuerpo-regularizada {
+    stroke: darksalmon;
+}
+.flecha-punta-regularizada {
+    stroke: darksalmon;
+    fill: darksalmon;
+}
+
+.regularizada {
+    fill: darksalmon;
+}
+
+.aprobada {
+    opacity: 0.3;
 }
 
 #input {
