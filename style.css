@@ -1,0 +1,52 @@
+.aprobada {
+    opacity: 0.3;
+}
+
+.flecha-cuerpo-regularizada {
+    stroke: darksalmon;
+}
+.flecha-punta-regularizada {
+    stroke: darksalmon;
+    fill: darksalmon;
+}
+
+.regularizada {
+    fill: darksalmon;
+}
+
+.flecha-cuerpo-regularizable {
+    stroke: gold;
+}
+
+.flecha-cuerpo-regularizable {
+    stroke: gold;
+    fill: gold;
+}
+
+.regularizable {
+    fill: gold;
+}
+
+.flecha-cuerpo-aprobable {
+    stroke: lightgreen;
+}
+
+.flecha-punta-aprobable {
+    stroke: lightgreen;
+    fill: lightgreen;
+}
+
+.aprobable {
+    fill: lightgreen;
+}
+
+#input {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 1em;
+}
+
+#calcular {
+    margin-left: 0.5em;
+}
