@@ -44,9 +44,30 @@
     display: flex;
     align-items: center;
     position: relative;
-    margin-bottom: 1em;
+    margin: 1em;
+}
+
+#materias {
+    margin-left: 1em;
+    position: relative;
 }
 
 #calcular {
     margin-left: 0.5em;
+}
+
+textarea {
+    resize: none;
+}
+
+html,body{
+    height:100%;
+}
+ 
+svg {
+    height: 95%;
+    display:block;
+    position: absolute;
+    top:0;
+    left:0;
 }
