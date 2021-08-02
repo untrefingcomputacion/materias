@@ -103,11 +103,7 @@ const calcular = () => {
 
     const materiasYCorrelativas = mapObject(materiasRaw.reduce(mapMateria, {}), mapCorrelativas);
     const materias = mapObject(materiasYCorrelativas, mapCursadasYFinales, { listadoMaterias: materiasYCorrelativas });
-    const materiasAgrupadas = agruparMaterias(materias);
-    // document.getElementById("materias").innerText = `REGULARIZABLES: ${JSON.stringify(Object.keys(materiasAgrupadas.regularizables).map(k => materiasAgrupadas.regularizables[k].nombre), null, 2)}\r\n
-    // APROBABLES: ${JSON.stringify(Object.keys(materiasAgrupadas.aprobables).map(k => materiasAgrupadas.aprobables[k].nombre), null, 2)}\r\n
-    // REGULARIZADAS: ${JSON.stringify(Object.keys(materiasAgrupadas.regularizadas).map(k => materiasAgrupadas.regularizadas[k].nombre), null, 2)}\r\n
-    // APROBADAS: ${JSON.stringify(Object.keys(materiasAgrupadas.aprobadas).map(k => materiasAgrupadas.aprobadas[k].nombre), null, 2)}`;
+    agruparMaterias(materias);
 }
 
 document.getElementById("calcular").addEventListener("click", calcular, false);
