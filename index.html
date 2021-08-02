@@ -23,16 +23,14 @@
       <div class="row">
         <form>
           <div class="form-group" id="input">
-            <div class="col-3">
+            <div class="col">
               <textarea
                 class="form-control"
                 id="datosSIU"
-                rows="2"
-                cols="10"
                 placeholder="Pegar Plan de Estudios"
               autofocus></textarea>
             </div>
-            <div class="col-1">
+            <div class="col">
               <button type="button" class="btn btn-primary" id="calcular">
                 Calcular
               </button>
@@ -40,8 +38,12 @@
           </div>
           <div class="form-group" id="leyenda">
             <div class="row-10">
-              <i class="bi bi-square" id="leyenda-aprobada"></i> Aprobada  <i class="bi bi-square-fill" id="leyenda-regularizada"></i> Regularizada (Debe final)  <i class="bi bi-square-fill" id="leyenda-aprobable"></i> Puede cursar y rendir final  <i class="bi bi-square-fill" id="leyenda-regularizable"></i> Puede cursar, pero no rendir final  <i class="bi bi-square" id="leyenda-no-cursable"></i> No puede cursar
-            </div>
+              <span class="texto-leyenda"><i class="bi bi-square" id="leyenda-aprobada"></i> Aprobada</span>
+              <span class="texto-leyenda"><i class="bi bi-square-fill" id="leyenda-regularizada"></i> Regularizada (Debe final)</span>
+              <span class="texto-leyenda"><i class="bi bi-square-fill" id="leyenda-aprobable"></i> Puede cursar y rendir final</span>
+              <span class="texto-leyenda"><i class="bi bi-square-fill" id="leyenda-regularizable"></i> Puede cursar, pero no rendir final</span>
+              <span class="texto-leyenda"><i class="bi bi-square" id="leyenda-no-cursable"></i> No puede cursar</span>
+          </div>
           </div>
         </form>
       </div>

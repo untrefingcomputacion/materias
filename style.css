@@ -94,3 +94,8 @@ svg {
 #leyenda-regularizable {
     color: gold;
 }
+
+.texto-leyenda {
+    display: inline-block;
+    margin-right: 1em;
+}
