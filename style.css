@@ -71,3 +71,26 @@ svg {
     top:0;
     left:0;
 }
+
+#leyenda {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 1em;
+}
+
+#leyenda-aprobada {
+    opacity: 0.3
+}
+
+#leyenda-regularizada {
+    color: darksalmon;
+}
+
+#leyenda-aprobable {
+    color: lightgreen;
+}
+
+#leyenda-regularizable {
+    color: gold;
+}
