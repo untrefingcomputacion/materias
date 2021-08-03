@@ -54,7 +54,7 @@ const mapCorrelativas = (materia, key) => {
 }
 
 const mapCursadasYFinales = (materia, _key, { listadoMaterias }) => {
-    const regularizable = materia.instancia === null && materia.correlativas.every(correlativa => ['Equivalencia', 'Regularidad', 'Examen'].includes(listadoMaterias[correlativa].instancia)) && materia.correlativas.some(correlativa => listadoMaterias[correlativa].instancia === 'Regularidad');
+    const regularizable = (materia.instancia === null || materia.instancia === 'En Curso') && materia.correlativas.every(correlativa => ['Equivalencia', 'Regularidad', 'Examen'].includes(listadoMaterias[correlativa].instancia)) && materia.correlativas.some(correlativa => listadoMaterias[correlativa].instancia === 'Regularidad');
     const aprobable = materia.instancia !== 'Examen' && materia.instancia !== 'Equivalencia' && (materia.correlativas === [] || materia.correlativas.every(correlativa => ['Equivalencia', 'Examen'].includes(listadoMaterias[correlativa].instancia)));
     return { ...materia, regularizable, aprobable };
 }
