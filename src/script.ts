@@ -1,10 +1,10 @@
-import { mapObject, correlatividades } from './utils.js';
+import { mapObject, correlatividades } from './utils';
 
 const resetearEstilos = () => {
     document.querySelectorAll('.materia, .flecha').forEach(el => el.classList.remove('aprobada', 'regularizada', 'flecha-punta-regularizada', 'flecha-cuerpo-regularizada', 'regularizable', 'flecha-punta-regularizable', 'flecha-cuerpo-regularizable', 'aprobable', 'flecha-punta-aprobable', 'flecha-cuerpo-aprobable'));
 }
 
-const estilizarAprobada = key => {
+const estilizarAprobada = (key: string) => {
     document.querySelectorAll(`.id-${key}`).forEach(el => el.classList.add('aprobada'));
 }
 
