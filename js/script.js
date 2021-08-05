@@ -53,10 +53,21 @@ const mapCorrelativas = (materia, key) => {
     return { ...materia, correlativas: correlatividades[key] };
 }
 
+const checkRegularizable = (materia, listadoMaterias) => {
+    return (materia.instancia === null || materia.instancia === 'En Curso') && materia.correlativas.every(correlativa => ['Equivalencia', 'Regularidad', 'Examen'].includes(listadoMaterias[correlativa].instancia)) && materia.correlativas.some(correlativa => listadoMaterias[correlativa].instancia === 'Regularidad');
+}
+
+const checkAprobable = (materia, listadoMaterias) => {
+    return  materia.instancia !== 'Examen' && materia.instancia !== 'Equivalencia' && (materia.correlativas === [] || materia.correlativas.every(correlativa => ['Equivalencia', 'Examen'].includes(listadoMaterias[correlativa].instancia)));
+}
+
 const mapCursadasYFinales = (materia, _key, { listadoMaterias }) => {
-    const regularizable = (materia.instancia === null || materia.instancia === 'En Curso') && materia.correlativas.every(correlativa => ['Equivalencia', 'Regularidad', 'Examen'].includes(listadoMaterias[correlativa].instancia)) && materia.correlativas.some(correlativa => listadoMaterias[correlativa].instancia === 'Regularidad');
-    const aprobable = materia.instancia !== 'Examen' && materia.instancia !== 'Equivalencia' && (materia.correlativas === [] || materia.correlativas.every(correlativa => ['Equivalencia', 'Examen'].includes(listadoMaterias[correlativa].instancia)));
-    return { ...materia, regularizable, aprobable };
+    const regularizable = checkRegularizable(materia, listadoMaterias);
+    const aprobable = checkAprobable(materia, listadoMaterias);
+    const regularizada = materia.instancia === 'Regularidad';
+    const aprobada = materia.instancia === 'Examen' || materia.instancia === 'Equivalencia';
+
+    return { ...materia, regularizable, aprobable, regularizada, aprobada };
 }
 
 const agruparMaterias = materias => {
@@ -76,11 +87,11 @@ const agruparMaterias = materias => {
                 estilizarAprobable(key);
                 aprobables[key] = element;
             }
-            if (element.instancia === 'Regularidad') {
+            if (element.regularizada) {
                 estilizarRegularizada(key);
                 regularizadas[key] = element;
             }
-            if (element.instancia === 'Examen' || element.instancia === 'Equivalencia') {
+            if (element.aprobada) {
                 estilizarAprobada(key);
                 aprobadas[key] = element;
             }
