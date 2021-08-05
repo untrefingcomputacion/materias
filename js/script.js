@@ -80,19 +80,15 @@ const agruparMaterias = materias => {
         if (Object.hasOwnProperty.call(materias, key)) {
             const element = materias[key];
             if (element.regularizable) {
-                estilizarRegularizable(key);
                 regularizables[key] = element;
             }
             if (element.aprobable) {
-                estilizarAprobable(key);
                 aprobables[key] = element;
             }
             if (element.regularizada) {
-                estilizarRegularizada(key);
                 regularizadas[key] = element;
             }
             if (element.aprobada) {
-                estilizarAprobada(key);
                 aprobadas[key] = element;
             }
         }
@@ -105,6 +101,21 @@ const agruparMaterias = materias => {
     }
 }
 
+const estilizar = (materias, funcEstilo) => {
+    for (const key in materias) {
+        if (Object.hasOwnProperty.call(materias, key)) {
+            funcEstilo(key);
+        }
+    }
+}
+
+const estilizarMaterias = materiasAgrupadas => {
+    estilizar(materiasAgrupadas.regularizables, estilizarRegularizable);
+    estilizar(materiasAgrupadas.regularizadas, estilizarRegularizada);
+    estilizar(materiasAgrupadas.aprobables, estilizarAprobable);
+    estilizar(materiasAgrupadas.aprobadas, estilizarAprobada);
+}
+
 const calcular = () => {
     resetearEstilos();
     const datosSIU = document.getElementById("datosSIU").value;
@@ -114,7 +125,8 @@ const calcular = () => {
 
     const materiasYCorrelativas = mapObject(materiasRaw.reduce(mapMateria, {}), mapCorrelativas);
     const materias = mapObject(materiasYCorrelativas, mapCursadasYFinales, { listadoMaterias: materiasYCorrelativas });
-    agruparMaterias(materias);
+    const materiasAgrupadas = agruparMaterias(materias);
+    estilizarMaterias(materiasAgrupadas);
 }
 
 document.getElementById("calcular").addEventListener("click", calcular, false);
