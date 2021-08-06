@@ -10,7 +10,7 @@ executors:
 
 
 jobs:
-  build:
+  install_dependencies:
     executor: node
     steps:
       - checkout
@@ -29,11 +29,32 @@ jobs:
       - run:
           name: Test
           command: yarn test
+  deploy:
+    executor: node
+    steps:
+      - attach_workspace:
+          at: .
+      - run:
+          name: Deploy
+          command: yarn deploy
 
 workflows:
-  build_and_test:
+  install_dependencies_and_test:
     jobs:
-      - build
+      - install_dependencies
       - test:
           requires:
-            - build
+            - install_dependencies
+  install_dependencies_test_and_deploy:
+    jobs:
+      - install_dependencies
+      - test:
+          requires:
+            - install_dependencies
+      - deploy:
+          filters:
+            branches:
+              only: main 
+          requires:
+            - test
+
