@@ -1,0 +1,2241 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+  <link rel="stylesheet" href="../css/style.css" />
+  <title>Document</title>
+  <script type="module" src="../app/script.ts"></script>
+</head>
+
+<body>
+  <div class="container-fluid d-flex h-100 flex-column">
+    <div class="row">
+      <form>
+        <div class="form-group" id="input">
+          <div class="col">
+            <textarea class="form-control" id="datosSIU" placeholder="Pegar Plan de Estudios" autofocus></textarea>
+          </div>
+          <div class="col">
+            <button type="button" class="btn btn-primary" id="calcular">
+              Calcular
+            </button>
+          </div>
+        </div>
+        <div class="form-group" id="leyenda">
+          <div class="row-10">
+            <span class="texto-leyenda"><i class="bi bi-square" id="leyenda-aprobada"></i> Aprobada</span>
+            <span class="texto-leyenda"><i class="bi bi-square-fill" id="leyenda-regularizada"></i> Regularizada (Debe
+              final)</span>
+            <span class="texto-leyenda"><i class="bi bi-square-fill" id="leyenda-aprobable"></i> Puede cursar y rendir
+              final</span>
+            <span class="texto-leyenda"><i class="bi bi-square-fill" id="leyenda-regularizable"></i> Puede cursar, pero
+              no rendir final</span>
+            <span class="texto-leyenda"><i class="bi bi-square" id="leyenda-no-cursable"></i> No puede cursar</span>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="row flex-fill" id="materias">
+      <svg version="1.1" viewBox="-0.5 -0.5 866 671">
+        <defs />
+        <g>
+          <rect x="0" y="0" width="90" height="40" fill="#ffffff" stroke="#000000" class="materia rectangulo id-592"
+            pointer-events="all" />
+          <g transform="translate(-0.5 -0.5)">
+            <switch>
+              <foreignObject class="materia texto id-592" style="overflow: visible; text-align: left"
+                pointer-events="none" width="100%" height="100%"
+                requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="
+                      display: flex;
+                      align-items: unsafe center;
+                      justify-content: unsafe center;
+                      width: 88px;
+                      height: 1px;
+                      padding-top: 20px;
+                      margin-left: 1px;
+                    ">
+                  <div style="
+                        box-sizing: border-box;
+                        font-size: 0;
+                        text-align: center;
+                      ">
+                    <div style="
+                          display: inline-block;
+                          font-size: 7px;
+                          font-family: Helvetica;
+                          color: #000000;
+                          line-height: 1.2;
+                          pointer-events: all;
+                          white-space: normal;
+                          word-wrap: normal;
+                        ">
+                      <font style="font-size: 7px">INTRODUCCIÓN A LA PROBLEMÁTICA DEL MUNDO
+                        CONTEMPORANEO</font>
+                    </div>
+                  </div>
+                </div>
+              </foreignObject>
+              <text x="45" y="22" fill="#000000" font-family="Helvetica" font-size="7px" text-anchor="middle">
+                INTRODUCCIÓN A LA PROBLEM...
+              </text>
+            </switch>
+          </g>
+          <rect x="0" y="70" width="90" height="40" fill="#ffffff" stroke="#000000" class="materia rectangulo id-591"
+            pointer-events="all" />
+          <g transform="translate(-0.5 -0.5)">
+            <switch>
+              <foreignObject class="materia texto id-591" style="overflow: visible; text-align: left"
+                pointer-events="none" width="100%" height="100%"
+                requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="
+                      display: flex;
+                      align-items: unsafe center;
+                      justify-content: unsafe center;
+                      width: 88px;
+                      height: 1px;
+                      padding-top: 90px;
+                      margin-left: 1px;
+                    ">
+                  <div style="
+                        box-sizing: border-box;
+                        font-size: 0;
+                        text-align: center;
+                      ">
+                    <div style="
+                          display: inline-block;
+                          font-size: 7px;
+                          font-family: Helvetica;
+                          color: #000000;
+                          line-height: 1.2;
+                          pointer-events: all;
+                          white-space: normal;
+                          word-wrap: normal;
+                        ">
+                      <font style="font-size: 7px">PROBLEMAS DE HISTORIA DEL SIGLO XX</font>
+                    </div>
+                  </div>
+                </div>
+              </foreignObject>
+              <text x="45" y="92" fill="#000000" font-family="Helvetica" font-size="7px" text-anchor="middle">
+                PROBLEMAS DE HISTORIA DEL...
+              </text>
+            </switch>
+          </g>
+          <rect x="0" y="140" width="90" height="40" fill="#ffffff" stroke="#000003" class="materia rectangulo id-3"
+            pointer-events="all" />
+          <g transform="translate(-0.5 -0.5)">
+            <switch>
+              <foreignObject class="materia texto id-3" style="overflow: visible; text-align: left"
+                pointer-events="none" width="100%" height="100%"
+                requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="
+                      display: flex;
+                      align-items: unsafe center;
+                      justify-content: unsafe center;
+                      width: 88px;
+                      height: 1px;
+                      padding-top: 160px;
+                      margin-left: 1px;
+                    ">
+                  <div style="
+                        box-sizing: border-box;
+                        font-size: 0;
+                        text-align: center;
+                      ">
+                    <div style="
+                          display: inline-block;
+                          font-size: 7px;
+                          font-family: Helvetica;
+                          color: #000000;
+                          line-height: 1.2;
+                          pointer-events: all;
+                          white-space: normal;
+                          word-wrap: normal;
+                        ">
+                      <font style="font-size: 7px">CUESTIONES DE SOCIOLOGÍA, ECONOMÍA Y POLÍTICA</font>
+                    </div>
+                  </div>
+                </div>
+              </foreignObject>
+              <text x="45" y="162" fill="#000000" font-family="Helvetica" font-size="7px" text-anchor="middle">
+                CUESTIONES DE SOCIOLOGÍA,...
+              </text>
+            </switch>
+          </g>
+          <rect x="0" y="210" width="90" height="40" fill="#ffffff" stroke="#000002" class="materia rectangulo id-2"
+            pointer-events="all" />
+          <g transform="translate(-0.5 -0.5)">
+            <switch>
+              <foreignObject class="materia texto id-2" style="overflow: visible; text-align: left"
+                pointer-events="none" width="100%" height="100%"
+                requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="
+                      display: flex;
+                      align-items: unsafe center;
+                      justify-content: unsafe center;
+                      width: 88px;
+                      height: 1px;
+                      padding-top: 230px;
+                      margin-left: 1px;
+                    ">
+                  <div style="
+                        box-sizing: border-box;
+                        font-size: 0;
+                        text-align: center;
+                      ">
+                    <div style="
+                          display: inline-block;
+                          font-size: 7px;
+                          font-family: Helvetica;
+                          color: #000000;
+                          line-height: 1.2;
+                          pointer-events: all;
+                          white-space: normal;
+                          word-wrap: normal;
+                        ">
+                      <font style="font-size: 7px">CULTURA CONTEMPORANEA</font>
+                    </div>
+                  </div>
+                </div>
+              </foreignObject>
+              <text x="45" y="232" fill="#000000" font-family="Helvetica" font-size="7px" text-anchor="middle">
+                CULTURA CONTEMPORANEA
+              </text>
+            </switch>
+          </g>
+          <path d="M 237.5 40 L 248 40 L 248 50 L 432 50 L 432 120 L 432.34 133.63" fill="none" stroke="#000000"
+            class="flecha cuerpo id-862" stroke-miterlimit="10" pointer-events="stroke" />
+          <path d="M 432.47 138.88 L 428.8 131.97 L 432.34 133.63 L 435.8 131.8 Z" fill="#000862" stroke="#000000"
+            class="flecha punta id-862" stroke-miterlimit="10" pointer-events="all" />
+          <path d="M 192.5 40 L 207.55 40 L 207.51 63.63" fill="none" stroke="#000000" class="flecha cuerpo id-862"
+            stroke-miterlimit="10" pointer-events="stroke" />
+          <path d="M 207.5 68.88 L 204.01 61.88 L 207.51 63.63 L 211.01 61.89 Z" fill="#000862" stroke="#000000"
+            class="flecha punta id-862" stroke-miterlimit="10" pointer-events="all" />
+          <rect x="170" y="0" width="90" height="40" fill="#ffffff" stroke="#000000" class="materia rectangulo id-862"
+            pointer-events="all" />
+          <g transform="translate(-0.5 -0.5)">
+            <switch>
+              <foreignObject class="materia texto id-862" style="overflow: visible; text-align: left"
+                pointer-events="none" width="100%" height="100%"
+                requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="
+                      display: flex;
+                      align-items: unsafe center;
+                      justify-content: unsafe center;
+                      width: 88px;
+                      height: 1px;
+                      padding-top: 20px;
+                      margin-left: 171px;
+                    ">
+                  <div style="
+                        box-sizing: border-box;
+                        font-size: 0;
+                        text-align: center;
+                      ">
+                    <div style="
+                          display: inline-block;
+                          font-size: 7px;
+                          font-family: Helvetica;
+                          color: #000000;
+                          line-height: 1.2;
+                          pointer-events: all;
+                          white-space: normal;
+                          word-wrap: normal;
+                        ">
+                      <font style="font-size: 7px">ALGEBRA<br />I<br /></font>
+                    </div>
+                  </div>
+                </div>
+              </foreignObject>
+              <text x="215" y="22" fill="#000000" font-family="Helvetica" font-size="7px" text-anchor="middle">
+                ALGEBRA...
+              </text>
+            </switch>
+          </g>
+          <path d="M 185 110 L 185 133.63" fill="none" stroke="#000000" class="flecha cuerpo id-1267"
+            stroke-miterlimit="10" pointer-events="stroke" />
+          <path d="M 185 138.88 L 181.5 131.88 L 185 133.63 L 188.5 131.88 Z" fill="#001267" stroke="#000000"
+            class="flecha punta id-1267" stroke-miterlimit="10" pointer-events="all" />
+          <path d="M 207.5 110 L 207.55 120 L 272.36 120 L 272.4 133.63" fill="none" stroke="#000000"
+            class="flecha cuerpo id-1267" stroke-miterlimit="10" pointer-events="stroke" />
+          <path d="M 272.42 138.88 L 268.9 131.89 L 272.4 133.63 L 275.9 131.87 Z" fill="#001267" stroke="#000000"
+            class="flecha punta id-1267" stroke-miterlimit="10" pointer-events="all" />
+          <rect x="140" y="70" width="90" height="40" fill="#ffffff" stroke="#000000" class="materia rectangulo id-1267"
+            pointer-events="all" />
+          <g transform="translate(-0.5 -0.5)">
+            <switch>
+              <foreignObject class="materia texto id-1267" style="overflow: visible; text-align: left"
+                pointer-events="none" width="100%" height="100%"
+                requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="
+                      display: flex;
+                      align-items: unsafe center;
+                      justify-content: unsafe center;
+                      width: 88px;
+                      height: 1px;
+                      padding-top: 90px;
+                      margin-left: 141px;
+                    ">
+                  <div style="
+                        box-sizing: border-box;
+                        font-size: 0;
+                        text-align: center;
+                      ">
+                    <div style="
+                          display: inline-block;
+                          font-size: 7px;
+                          font-family: Helvetica;
+                          color: #000000;
+                          line-height: 1.2;
+                          pointer-events: all;
+                          white-space: normal;
+                          word-wrap: normal;
+                        ">
+                      <font style="font-size: 7px">ALGEBRA<br />II<br /></font>
+                    </div>
+                  </div>
+                </div>
+              </foreignObject>
+              <text x="185" y="92" fill="#000000" font-family="Helvetica" font-size="7px" text-anchor="middle">
+                ALGEBRA...
+              </text>
+            </switch>
+          </g>
+          <path d="M 347.5 40 L 355 40 L 355 63.63" fill="none" stroke="#000000" class="flecha cuerpo id-1265"
+            stroke-miterlimit="10" pointer-events="stroke" />
+          <path d="M 355 68.88 L 351.5 61.88 L 355 63.63 L 358.5 61.88 Z" fill="#001265" stroke="#000000"
+            class="flecha punta id-1265" stroke-miterlimit="10" pointer-events="all" />
+          <path d="M 302.5 40 L 295 40 L 295 133.63" fill="none" stroke="#000000" class="flecha cuerpo id-1265"
+            stroke-miterlimit="10" pointer-events="stroke" />
+          <path d="M 295 138.88 L 291.5 131.88 L 295 133.63 L 298.5 131.88 Z" fill="#001265" stroke="#000000"
+            class="flecha punta id-1265" stroke-miterlimit="10" pointer-events="all" />
+          <rect x="280" y="0" width="90" height="40" fill="#ffffff" stroke="#000000" class="materia rectangulo id-1265"
+            pointer-events="all" />
+          <g transform="translate(-0.5 -0.5)">
+            <switch>
+              <foreignObject class="materia texto id-1265" style="overflow: visible; text-align: left"
+                pointer-events="none" width="100%" height="100%"
+                requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="
+                      display: flex;
+                      align-items: unsafe center;
+                      justify-content: unsafe center;
+                      width: 88px;
+                      height: 1px;
+                      padding-top: 20px;
+                      margin-left: 281px;
+                    ">
+                  <div style="
+                        box-sizing: border-box;
+                        font-size: 0;
+                        text-align: center;
+                      ">
+                    <div style="
+                          display: inline-block;
+                          font-size: 7px;
+                          font-family: Helvetica;
+                          color: #000000;
+                          line-height: 1.2;
+                          pointer-events: all;
+                          white-space: normal;
+                          word-wrap: normal;
+                        ">
+                      <font style="font-size: 7px">ANÁLISIS MATEMÁTICO<br />I<br /></font>
+                    </div>
+                  </div>
+                </div>
+              </foreignObject>
+              <text x="325" y="22" fill="#000000" font-family="Helvetica" font-size="7px" text-anchor="middle">
+                ANÁLISIS MATEMÁTICO...
+              </text>
+            </switch>
+          </g>
+          <path d="M 527.5 40 L 542.55 40 L 542.51 63.63" fill="none" stroke="#000000" class="flecha cuerpo id-1235"
+            stroke-miterlimit="10" pointer-events="stroke" />
+          <path d="M 542.5 68.88 L 539.01 61.88 L 542.51 63.63 L 546.01 61.89 Z" fill="#001235" stroke="#000000"
+            class="flecha punta id-1235" stroke-miterlimit="10" pointer-events="all" />
+          <rect x="460" y="0" width="90" height="40" fill="#ffffff" stroke="#000000" class="materia rectangulo id-1235"
+            pointer-events="all" />
+          <g transform="translate(-0.5 -0.5)">
+            <switch>
+              <foreignObject class="materia texto id-1235" style="overflow: visible; text-align: left"
+                pointer-events="none" width="100%" height="100%"
+                requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="
+                      display: flex;
+                      align-items: unsafe center;
+                      justify-content: unsafe center;
+                      width: 88px;
+                      height: 1px;
+                      padding-top: 20px;
+                      margin-left: 461px;
+                    ">
+                  <div style="
+                        box-sizing: border-box;
+                        font-size: 0;
+                        text-align: center;
+                      ">
+                    <div style="
+                          display: inline-block;
+                          font-size: 7px;
+                          font-family: Helvetica;
+                          color: #000000;
+                          line-height: 1.2;
+                          pointer-events: all;
+                          white-space: normal;
+                          word-wrap: normal;
+                        ">
+                      <font style="font-size: 7px">ALGORITMOS Y PROGRAMACIÓN<br />I<br /></font>
+                    </div>
+                  </div>
+                </div>
+              </foreignObject>
+              <text x="505" y="22" fill="#000000" font-family="Helvetica" font-size="7px" text-anchor="middle">
+                ALGORITMOS Y PROGRAMACIÓN...
+              </text>
+            </switch>
+          </g>
+          <path d="M 645 40 L 645 50 L 455 50 L 455 133.63" fill="none" stroke="#000000" class="flecha cuerpo id-1234"
+            stroke-miterlimit="10" pointer-events="stroke" />
+          <path d="M 455 138.88 L 451.5 131.88 L 455 133.63 L 458.5 131.88 Z" fill="#001234" stroke="#000000"
+            class="flecha punta id-1234" stroke-miterlimit="10" pointer-events="all" />
+          <rect x="600" y="0" width="90" height="40" fill="#ffffff" stroke="#000000" class="materia rectangulo id-1234"
+            pointer-events="all" />
+          <g transform="translate(-0.5 -0.5)">
+            <switch>
+              <foreignObject class="materia texto id-1234" style="overflow: visible; text-align: left"
+                pointer-events="none" width="100%" height="100%"
+                requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="
+                      display: flex;
+                      align-items: unsafe center;
+                      justify-content: unsafe center;
+                      width: 88px;
+                      height: 1px;
+                      padding-top: 20px;
+                      margin-left: 601px;
+                    ">
+                  <div style="
+                        box-sizing: border-box;
+                        font-size: 0;
+                        text-align: center;
+                      ">
+                    <div style="
+                          display: inline-block;
+                          font-size: 7px;
+                          font-family: Helvetica;
+                          color: #000000;
+                          line-height: 1.2;
+                          pointer-events: all;
+                          white-space: normal;
+                          word-wrap: normal;
+                        ">
+                      <font style="font-size: 7px">SISTEMAS DE REPRESENTACIÓN<br /></font>
+                    </div>
+                  </div>
+                </div>
+              </foreignObject>
+              <text x="645" y="22" fill="#000000" font-family="Helvetica" font-size="7px" text-anchor="middle">
+                SISTEMAS DE REPRESENTACIÓ...
+              </text>
+            </switch>
+          </g>
+          <path d="M 587.5 110 L 587.55 120 L 635 120 L 635 133.63" fill="none" stroke="#000000"
+            class="flecha cuerpo id-1236" stroke-miterlimit="10" pointer-events="stroke" />
+          <path d="M 635 138.88 L 631.5 131.88 L 635 133.63 L 638.5 131.88 Z" fill="#001236" stroke="#000000"
+            class="flecha punta id-1236" stroke-miterlimit="10" pointer-events="all" />
+          <rect x="520" y="70" width="90" height="40" fill="#ffffff" stroke="#000000" class="materia rectangulo id-1236"
+            pointer-events="all" />
+          <g transform="translate(-0.5 -0.5)">
+            <switch>
+              <foreignObject class="materia texto id-1236" style="overflow: visible; text-align: left"
+                pointer-events="none" width="100%" height="100%"
+                requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="
+                      display: flex;
+                      align-items: unsafe center;
+                      justify-content: unsafe center;
+                      width: 88px;
+                      height: 1px;
+                      padding-top: 90px;
+                      margin-left: 521px;
+                    ">
+                  <div style="
+                        box-sizing: border-box;
+                        font-size: 0;
+                        text-align: center;
+                      ">
+                    <div style="
+                          display: inline-block;
+                          font-size: 7px;
+                          font-family: Helvetica;
+                          color: #000000;
+                          line-height: 1.2;
+                          pointer-events: all;
+                          white-space: normal;
+                          word-wrap: normal;
+                        ">
+                      <font style="font-size: 7px">ALGORITMOS Y PROGRAMACIÓN<br />II<br /></font>
+                    </div>
+                  </div>
+                </div>
+              </foreignObject>
+              <text x="565" y="92" fill="#000000" font-family="Helvetica" font-size="7px" text-anchor="middle">
+                ALGORITMOS Y PROGRAMACIÓN...
+              </text>
+            </switch>
+          </g>
+          <path d="M 657.5 250 L 665 250 L 665 260 L 687.55 260 L 687.5 343.63" fill="none" stroke="#000000"
+            class="flecha cuerpo id-1240" stroke-miterlimit="10" pointer-events="stroke" />
+          <path d="M 687.5 348.88 L 684 341.88 L 687.5 343.63 L 691 341.88 Z" fill="#001240" stroke="#000000"
+            class="flecha punta id-1240" stroke-miterlimit="10" pointer-events="all" />
+          <rect x="590" y="210" width="90" height="40" fill="#ffffff" stroke="#000000"
+            class="materia rectangulo id-1240" pointer-events="all" />
+          <g transform="translate(-0.5 -0.5)">
+            <switch>
+              <foreignObject class="materia texto id-1240" style="overflow: visible; text-align: left"
+                pointer-events="none" width="100%" height="100%"
+                requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="
+                      display: flex;
+                      align-items: unsafe center;
+                      justify-content: unsafe center;
+                      width: 88px;
+                      height: 1px;
+                      padding-top: 230px;
+                      margin-left: 591px;
+                    ">
+                  <div style="
+                        box-sizing: border-box;
+                        font-size: 0;
+                        text-align: center;
+                      ">
+                    <div style="
+                          display: inline-block;
+                          font-size: 7px;
+                          font-family: Helvetica;
+                          color: #000000;
+                          line-height: 1.2;
+                          pointer-events: all;
+                          white-space: normal;
+                          word-wrap: normal;
+                        ">
+                      <font style="font-size: 7px">ALGORITMOS Y PROGRAMACIÓN<br />III<br /></font>
+                    </div>
+                  </div>
+                </div>
+              </foreignObject>
+              <text x="635" y="232" fill="#000000" font-family="Helvetica" font-size="7px" text-anchor="middle">
+                ALGORITMOS Y PROGRAMACIÓN...
+              </text>
+            </switch>
+          </g>
+          <path d="M 272.42 180 L 260 180 L 260 200 L 237.55 200 L 237.53 203.63" fill="none" stroke="#000000"
+            class="flecha cuerpo id-941" stroke-miterlimit="10" pointer-events="stroke" />
+          <path d="M 237.51 208.88 L 234.04 201.87 L 237.53 203.63 L 241.04 201.9 Z" fill="#000941" stroke="#000000"
+            class="flecha punta id-941" stroke-miterlimit="10" pointer-events="all" />
+          <path d="M 294.92 180 L 270 180 L 270 273.63" fill="none" stroke="#000000" class="flecha cuerpo id-941"
+            stroke-miterlimit="10" pointer-events="stroke" />
+          <path d="M 270 278.88 L 266.5 271.88 L 270 273.63 L 273.5 271.88 Z" fill="#000941" stroke="#000000"
+            class="flecha punta id-941" stroke-miterlimit="10" pointer-events="all" />
+          <path d="M 317.42 180 L 322.55 180 L 322.51 203.63" fill="none" stroke="#000000" class="flecha cuerpo id-941"
+            stroke-miterlimit="10" pointer-events="stroke" />
+          <path d="M 322.5 208.88 L 319.01 201.88 L 322.51 203.63 L 326.01 201.89 Z" fill="#000941" stroke="#000000"
+            class="flecha punta id-941" stroke-miterlimit="10" pointer-events="all" />
+          <rect x="249.92" y="140" width="90" height="40" fill="#ffffff" stroke="#000000"
+            class="materia rectangulo id-941" pointer-events="all" />
+          <g transform="translate(-0.5 -0.5)">
+            <switch>
+              <foreignObject class="materia texto id-941" style="overflow: visible; text-align: left"
+                pointer-events="none" width="100%" height="100%"
+                requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="
+                      display: flex;
+                      align-items: unsafe center;
+                      justify-content: unsafe center;
+                      width: 88px;
+                      height: 1px;
+                      padding-top: 160px;
+                      margin-left: 251px;
+                    ">
+                  <div style="
+                        box-sizing: border-box;
+                        font-size: 0;
+                        text-align: center;
+                      ">
+                    <div style="
+                          display: inline-block;
+                          font-size: 7px;
+                          font-family: Helvetica;
+                          color: #000000;
+                          line-height: 1.2;
+                          pointer-events: all;
+                          white-space: normal;
+                          word-wrap: normal;
+                        ">
+                      <font style="font-size: 7px">ANÁLISIS MATEMÁTICO<br />II<br /></font>
+                    </div>
+                  </div>
+                </div>
+              </foreignObject>
+              <text x="295" y="162" fill="#000000" font-family="Helvetica" font-size="7px" text-anchor="middle">
+                ANÁLISIS MATEMÁTICO...
+              </text>
+            </switch>
+          </g>
+          <path d="M 355 110 L 355 190 L 135 190 L 135 483.63" fill="none" stroke="#000000"
+            class="flecha cuerpo id-1266" stroke-miterlimit="10" pointer-events="stroke" />
+          <path d="M 135 488.88 L 131.5 481.88 L 135 483.63 L 138.5 481.88 Z" fill="#001266" stroke="#000000"
+            class="flecha punta id-1266" stroke-miterlimit="10" pointer-events="all" />
+          <path d="M 377.5 110 L 368 110 L 368 160 L 367.56 203.63" fill="none" stroke="#000000"
+            class="flecha cuerpo id-1266" stroke-miterlimit="10" pointer-events="stroke" />
+          <path d="M 367.51 208.88 L 364.08 201.85 L 367.56 203.63 L 371.08 201.92 Z" fill="#001266" stroke="#000000"
+            class="flecha punta id-1266" stroke-miterlimit="10" pointer-events="all" />
+          <rect x="310" y="70" width="90" height="40" fill="#ffffff" stroke="#000000" class="materia rectangulo id-1266"
+            pointer-events="all" />
+          <g transform="translate(-0.5 -0.5)">
+            <switch>
+              <foreignObject class="materia texto id-1266" style="overflow: visible; text-align: left"
+                pointer-events="none" width="100%" height="100%"
+                requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="
+                      display: flex;
+                      align-items: unsafe center;
+                      justify-content: unsafe center;
+                      width: 88px;
+                      height: 1px;
+                      padding-top: 90px;
+                      margin-left: 311px;
+                    ">
+                  <div style="
+                        box-sizing: border-box;
+                        font-size: 0;
+                        text-align: center;
+                      ">
+                    <div style="
+                          display: inline-block;
+                          font-size: 7px;
+                          font-family: Helvetica;
+                          color: #000000;
+                          line-height: 1.2;
+                          pointer-events: all;
+                          white-space: normal;
+                          word-wrap: normal;
+                        ">
+                      <font style="font-size: 7px">FÍSICA<br />I<br /></font>
+                    </div>
+                  </div>
+                </div>
+              </foreignObject>
+              <text x="355" y="92" fill="#000000" font-family="Helvetica" font-size="7px" text-anchor="middle">
+                FÍSICA...
+              </text>
+            </switch>
+          </g>
+          <path d="M 322.5 250 L 305 250 L 305 343.63" fill="none" stroke="#000000" class="flecha cuerpo id-1269"
+            stroke-miterlimit="10" pointer-events="stroke" />
+          <path d="M 305 348.88 L 301.5 341.88 L 305 343.63 L 308.5 341.88 Z" fill="#001269" stroke="#000000"
+            class="flecha punta id-1269" stroke-miterlimit="10" pointer-events="all" />
+          <path d="M 322.5 250 L 322.55 330 L 409.55 330 L 409.51 343.63" fill="none" stroke="#000000"
+            class="flecha cuerpo id-1269" stroke-miterlimit="10" pointer-events="stroke" />
+          <path d="M 409.5 348.88 L 406.02 341.87 L 409.51 343.63 L 413.02 341.89 Z" fill="#001269" stroke="#000000"
+            class="flecha punta id-1269" stroke-miterlimit="10" pointer-events="all" />
+          <path d="M 345 250 L 352.55 250 L 352.51 273.63" fill="none" stroke="#000000" class="flecha cuerpo id-1269"
+            stroke-miterlimit="10" pointer-events="stroke" />
+          <path d="M 352.5 278.88 L 349.01 271.88 L 352.51 273.63 L 356.01 271.89 Z" fill="#001269" stroke="#000000"
+            class="flecha punta id-1269" stroke-miterlimit="10" pointer-events="all" />
+          <path d="M 367.5 250 L 367.55 270 L 445 270 L 445 330 L 545 330 L 545 343.63" fill="none" stroke="#000000"
+            class="flecha cuerpo id-1269" stroke-miterlimit="10" pointer-events="stroke" />
+          <path d="M 545 348.88 L 541.5 341.88 L 545 343.63 L 548.5 341.88 Z" fill="#001269" stroke="#000000"
+            class="flecha punta id-1269" stroke-miterlimit="10" pointer-events="all" />
+          <rect x="300" y="210" width="90" height="40" fill="#ffffff" stroke="#000000"
+            class="materia rectangulo id-1269" pointer-events="all" />
+          <g transform="translate(-0.5 -0.5)">
+            <switch>
+              <foreignObject class="materia texto id-1269" style="overflow: visible; text-align: left"
+                pointer-events="none" width="100%" height="100%"
+                requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="
+                      display: flex;
+                      align-items: unsafe center;
+                      justify-content: unsafe center;
+                      width: 88px;
+                      height: 1px;
+                      padding-top: 230px;
+                      margin-left: 301px;
+                    ">
+                  <div style="
+                        box-sizing: border-box;
+                        font-size: 0;
+                        text-align: center;
+                      ">
+                    <div style="
+                          display: inline-block;
+                          font-size: 7px;
+                          font-family: Helvetica;
+                          color: #000000;
+                          line-height: 1.2;
+                          pointer-events: all;
+                          white-space: normal;
+                          word-wrap: normal;
+                        ">
+                      <font style="font-size: 7px">FÍSICA<br />II<br /></font>
+                    </div>
+                  </div>
+                </div>
+              </foreignObject>
+              <text x="345" y="232" fill="#000000" font-family="Helvetica" font-size="7px" text-anchor="middle">
+                FÍSICA...
+              </text>
+            </switch>
+          </g>
+          <path d="M 352.5 320 L 360 320 L 360 405 L 452.55 405 L 452.52 413.63" fill="none" stroke="#000000"
+            class="flecha cuerpo id-1270" stroke-miterlimit="10" pointer-events="stroke" />
+          <path d="M 452.5 418.88 L 449.02 411.87 L 452.52 413.63 L 456.02 411.89 Z" fill="#001270" stroke="#000000"
+            class="flecha punta id-1270" stroke-miterlimit="10" pointer-events="all" />
+          <rect x="330" y="280" width="90" height="40" fill="#ffffff" stroke="#000000"
+            class="materia rectangulo id-1270" pointer-events="all" />
+          <g transform="translate(-0.5 -0.5)">
+            <switch>
+              <foreignObject class="materia texto id-1270" style="overflow: visible; text-align: left"
+                pointer-events="none" width="100%" height="100%"
+                requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="
+                      display: flex;
+                      align-items: unsafe center;
+                      justify-content: unsafe center;
+                      width: 88px;
+                      height: 1px;
+                      padding-top: 300px;
+                      margin-left: 331px;
+                    ">
+                  <div style="
+                        box-sizing: border-box;
+                        font-size: 0;
+                        text-align: center;
+                      ">
+                    <div style="
+                          display: inline-block;
+                          font-size: 7px;
+                          font-family: Helvetica;
+                          color: #000000;
+                          line-height: 1.2;
+                          pointer-events: all;
+                          white-space: normal;
+                          word-wrap: normal;
+                        ">
+                      <font style="font-size: 7px">FÍSICA<br />III<br /></font>
+                    </div>
+                  </div>
+                </div>
+              </foreignObject>
+              <text x="375" y="302" fill="#000000" font-family="Helvetica" font-size="7px" text-anchor="middle">
+                FÍSICA...
+              </text>
+            </switch>
+          </g>
+          <path d="M 185 180 L 185 195 L 400 195 L 400 260 L 477.55 260 L 477.51 273.63" fill="none" stroke="#000000"
+            class="flecha cuerpo id-1239" stroke-miterlimit="10" pointer-events="stroke" />
+          <path d="M 477.5 278.88 L 474.02 271.87 L 477.51 273.63 L 481.02 271.89 Z" fill="#001239" stroke="#000000"
+            class="flecha punta id-1239" stroke-miterlimit="10" pointer-events="all" />
+          <rect x="140" y="140" width="90" height="40" fill="#ffffff" stroke="#000000"
+            class="materia rectangulo id-1239" pointer-events="all" />
+          <g transform="translate(-0.5 -0.5)">
+            <switch>
+              <foreignObject class="materia texto id-1239" style="overflow: visible; text-align: left"
+                pointer-events="none" width="100%" height="100%"
+                requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="
+                      display: flex;
+                      align-items: unsafe center;
+                      justify-content: unsafe center;
+                      width: 88px;
+                      height: 1px;
+                      padding-top: 160px;
+                      margin-left: 141px;
+                    ">
+                  <div style="
+                        box-sizing: border-box;
+                        font-size: 0;
+                        text-align: center;
+                      ">
+                    <div style="
+                          display: inline-block;
+                          font-size: 7px;
+                          font-family: Helvetica;
+                          color: #000000;
+                          line-height: 1.2;
+                          pointer-events: all;
+                          white-space: normal;
+                          word-wrap: normal;
+                        ">
+                      <font style="font-size: 7px">MATEMÁTICA DISCRETA<br /></font>
+                    </div>
+                  </div>
+                </div>
+              </foreignObject>
+              <text x="185" y="162" fill="#000000" font-family="Helvetica" font-size="7px" text-anchor="middle">
+                MATEMÁTICA DISCRETA&#xa;
+              </text>
+            </switch>
+          </g>
+          <path d="M 455 180 L 455 203.63" fill="none" stroke="#000000" class="flecha cuerpo id-1238"
+            stroke-miterlimit="10" pointer-events="stroke" />
+          <path d="M 455 208.88 L 451.5 201.88 L 455 203.63 L 458.5 201.88 Z" fill="#001238" stroke="#000000"
+            class="flecha punta id-1238" stroke-miterlimit="10" pointer-events="all" />
+          <rect x="410" y="140" width="90" height="40" fill="#ffffff" stroke="#000000"
+            class="materia rectangulo id-1238" pointer-events="all" />
+          <g transform="translate(-0.5 -0.5)">
+            <switch>
+              <foreignObject class="materia texto id-1238" style="overflow: visible; text-align: left"
+                pointer-events="none" width="100%" height="100%"
+                requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="
+                      display: flex;
+                      align-items: unsafe center;
+                      justify-content: unsafe center;
+                      width: 88px;
+                      height: 1px;
+                      padding-top: 160px;
+                      margin-left: 411px;
+                    ">
+                  <div style="
+                        box-sizing: border-box;
+                        font-size: 0;
+                        text-align: center;
+                      ">
+                    <div style="
+                          display: inline-block;
+                          font-size: 7px;
+                          font-family: Helvetica;
+                          color: #000000;
+                          line-height: 1.2;
+                          pointer-events: all;
+                          white-space: normal;
+                          word-wrap: normal;
+                        ">
+                      <font style="font-size: 7px">DISEÑO LÓGICO<br /></font>
+                    </div>
+                  </div>
+                </div>
+              </foreignObject>
+              <text x="455" y="162" fill="#000000" font-family="Helvetica" font-size="7px" text-anchor="middle">
+                DISEÑO LÓGICO&#xa;
+              </text>
+            </switch>
+          </g>
+          <path d="M 635 180 L 635 203.63" fill="none" stroke="#000000" class="flecha cuerpo id-1237"
+            stroke-miterlimit="10" pointer-events="stroke" />
+          <path d="M 635 208.88 L 631.5 201.88 L 635 203.63 L 638.5 201.88 Z" fill="#001237" stroke="#000000"
+            class="flecha punta id-1237" stroke-miterlimit="10" pointer-events="all" />
+          <path d="M 657.5 180 L 657.55 195 L 745 195 L 745 400 L 394.55 400 L 394.51 413.63" fill="none"
+            stroke="#000000" class="flecha cuerpo id-1237" stroke-miterlimit="10" pointer-events="stroke" />
+          <path d="M 394.5 418.88 L 391.02 411.87 L 394.51 413.63 L 398.02 411.89 Z" fill="#001237" stroke="#000000"
+            class="flecha punta id-1237" stroke-miterlimit="10" pointer-events="all" />
+          <path d="M 612.5 180 L 612.55 195 L 522.55 195 L 522.5 273.63" fill="none" stroke="#000000"
+            class="flecha cuerpo id-1237" stroke-miterlimit="10" pointer-events="stroke" />
+          <path d="M 522.5 278.88 L 519 271.88 L 522.5 273.63 L 526 271.88 Z" fill="#001237" stroke="#000000"
+            class="flecha punta id-1237" stroke-miterlimit="10" pointer-events="all" />
+          <rect x="590" y="140" width="90" height="40" fill="#ffffff" stroke="#000000"
+            class="materia rectangulo id-1237" pointer-events="all" />
+          <g transform="translate(-0.5 -0.5)">
+            <switch>
+              <foreignObject class="materia texto id-1237" style="overflow: visible; text-align: left"
+                pointer-events="none" width="100%" height="100%"
+                requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="
+                      display: flex;
+                      align-items: unsafe center;
+                      justify-content: unsafe center;
+                      width: 88px;
+                      height: 1px;
+                      padding-top: 160px;
+                      margin-left: 591px;
+                    ">
+                  <div style="
+                        box-sizing: border-box;
+                        font-size: 0;
+                        text-align: center;
+                      ">
+                    <div style="
+                          display: inline-block;
+                          font-size: 7px;
+                          font-family: Helvetica;
+                          color: #000000;
+                          line-height: 1.2;
+                          pointer-events: all;
+                          white-space: normal;
+                          word-wrap: normal;
+                        ">
+                      <font style="font-size: 7px">ESTRUCTURA DE DATOS<br /></font>
+                    </div>
+                  </div>
+                </div>
+              </foreignObject>
+              <text x="635" y="162" fill="#000000" font-family="Helvetica" font-size="7px" text-anchor="middle">
+                ESTRUCTURA DE DATOS&#xa;
+              </text>
+            </switch>
+          </g>
+          <path d="M 237.5 250 L 237.55 260 L 300 260 L 300 335 L 522.55 335 L 522.52 343.63" fill="none"
+            stroke="#000000" class="flecha cuerpo id-1242" stroke-miterlimit="10" pointer-events="stroke" />
+          <path d="M 522.5 348.88 L 519.02 341.87 L 522.52 343.63 L 526.02 341.89 Z" fill="#001242" stroke="#000000"
+            class="flecha punta id-1242" stroke-miterlimit="10" pointer-events="all" />
+          <path d="M 192.5 250 L 180 250 L 180 480 L 229.55 480 L 229.53 483.63" fill="none" stroke="#000000"
+            class="flecha cuerpo id-1242" stroke-miterlimit="10" pointer-events="stroke" />
+          <path d="M 229.51 488.88 L 226.04 481.87 L 229.53 483.63 L 233.04 481.9 Z" fill="#001242" stroke="#000000"
+            class="flecha punta id-1242" stroke-miterlimit="10" pointer-events="all" />
+          <path d="M 192.5 250 L 192.55 475 L 349.09 475 L 349.1 482.35" fill="none" stroke="#000000"
+            class="flecha cuerpo id-1242" stroke-miterlimit="10" pointer-events="stroke" />
+          <path d="M 349.1 487.6 L 345.59 480.6 L 349.1 482.35 L 352.59 480.6 Z" fill="#001242" stroke="#000000"
+            class="flecha punta id-1242" stroke-miterlimit="10" pointer-events="all" />
+          <rect x="170" y="210" width="90" height="40" fill="#ffffff" stroke="#000000"
+            class="materia rectangulo id-1242" pointer-events="all" />
+          <g transform="translate(-0.5 -0.5)">
+            <switch>
+              <foreignObject class="materia texto id-1242" style="overflow: visible; text-align: left"
+                pointer-events="none" width="100%" height="100%"
+                requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="
+                      display: flex;
+                      align-items: unsafe center;
+                      justify-content: unsafe center;
+                      width: 88px;
+                      height: 1px;
+                      padding-top: 230px;
+                      margin-left: 171px;
+                    ">
+                  <div style="
+                        box-sizing: border-box;
+                        font-size: 0;
+                        text-align: center;
+                      ">
+                    <div style="
+                          display: inline-block;
+                          font-size: 7px;
+                          font-family: Helvetica;
+                          color: #000000;
+                          line-height: 1.2;
+                          pointer-events: all;
+                          white-space: normal;
+                          word-wrap: normal;
+                        ">
+                      <font style="font-size: 7px">MATEMÁTICAS ESPECIALES<br /></font>
+                    </div>
+                  </div>
+                </div>
+              </foreignObject>
+              <text x="215" y="232" fill="#000000" font-family="Helvetica" font-size="7px" text-anchor="middle">
+                MATEMÁTICAS ESPECIALES&#xa;
+              </text>
+            </switch>
+          </g>
+          <path d="M 432.5 250 L 432.55 300 L 432.07 343.63" fill="none" stroke="#000000" class="flecha cuerpo id-752"
+            stroke-miterlimit="10" pointer-events="stroke" />
+          <path d="M 432.01 348.88 L 428.59 341.84 L 432.07 343.63 L 435.59 341.92 Z" fill="#000752" stroke="#000000"
+            class="flecha punta id-752" stroke-miterlimit="10" pointer-events="all" />
+          <path d="M 500 250 L 495 250 L 495 260 L 605 260 L 605 273.63" fill="none" stroke="#000000"
+            class="flecha cuerpo id-752" stroke-miterlimit="10" pointer-events="stroke" />
+          <path d="M 605 278.88 L 601.5 271.88 L 605 273.63 L 608.5 271.88 Z" fill="#000752" stroke="#000000"
+            class="flecha punta id-752" stroke-miterlimit="10" pointer-events="all" />
+          <path d="M 485 250 L 485 265 L 665 265 L 665 343.63" fill="none" stroke="#000000" class="flecha cuerpo id-752"
+            stroke-miterlimit="10" pointer-events="stroke" />
+          <path d="M 665 348.88 L 661.5 341.88 L 665 343.63 L 668.5 341.88 Z" fill="#000752" stroke="#000000"
+            class="flecha punta id-752" stroke-miterlimit="10" pointer-events="all" />
+          <rect x="410" y="210" width="90" height="40" fill="#ffffff" stroke="#000000" class="materia rectangulo id-752"
+            pointer-events="all" />
+          <g transform="translate(-0.5 -0.5)">
+            <switch>
+              <foreignObject class="materia texto id-752" style="overflow: visible; text-align: left"
+                pointer-events="none" width="100%" height="100%"
+                requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="
+                      display: flex;
+                      align-items: unsafe center;
+                      justify-content: unsafe center;
+                      width: 88px;
+                      height: 1px;
+                      padding-top: 230px;
+                      margin-left: 411px;
+                    ">
+                  <div style="
+                        box-sizing: border-box;
+                        font-size: 0;
+                        text-align: center;
+                      ">
+                    <div style="
+                          display: inline-block;
+                          font-size: 7px;
+                          font-family: Helvetica;
+                          color: #000000;
+                          line-height: 1.2;
+                          pointer-events: all;
+                          white-space: normal;
+                          word-wrap: normal;
+                        ">
+                      <font style="font-size: 7px">ARQUITECTURA DE COMPUTADORAS<br />I<br /></font>
+                    </div>
+                  </div>
+                </div>
+              </foreignObject>
+              <text x="455" y="232" fill="#000000" font-family="Helvetica" font-size="7px" text-anchor="middle">
+                ARQUITECTURA DE COMPUTADO...
+              </text>
+            </switch>
+          </g>
+          <path d="M 454.5 390 L 465 390 L 465 405 L 602.55 405 L 602.52 413.63" fill="none" stroke="#000000"
+            class="flecha cuerpo id-1246" stroke-miterlimit="10" pointer-events="stroke" />
+          <path d="M 602.5 418.88 L 599.02 411.87 L 602.52 413.63 L 606.02 411.89 Z" fill="#001246" stroke="#000000"
+            class="flecha punta id-1246" stroke-miterlimit="10" pointer-events="all" />
+          <rect x="387" y="350" width="90" height="40" fill="#ffffff" stroke="#000000"
+            class="materia rectangulo id-1246" pointer-events="all" />
+          <g transform="translate(-0.5 -0.5)">
+            <switch>
+              <foreignObject class="materia texto id-1246" style="overflow: visible; text-align: left"
+                pointer-events="none" width="100%" height="100%"
+                requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="
+                      display: flex;
+                      align-items: unsafe center;
+                      justify-content: unsafe center;
+                      width: 88px;
+                      height: 1px;
+                      padding-top: 370px;
+                      margin-left: 388px;
+                    ">
+                  <div style="
+                        box-sizing: border-box;
+                        font-size: 0;
+                        text-align: center;
+                      ">
+                    <div style="
+                          display: inline-block;
+                          font-size: 7px;
+                          font-family: Helvetica;
+                          color: #000000;
+                          line-height: 1.2;
+                          pointer-events: all;
+                          white-space: normal;
+                          word-wrap: normal;
+                        ">
+                      <font style="font-size: 7px">ARQUITECTURA DE COMPUTADORAS<br />II<br /></font>
+                    </div>
+                  </div>
+                </div>
+              </foreignObject>
+              <text x="432" y="372" fill="#000000" font-family="Helvetica" font-size="7px" text-anchor="middle">
+                ARQUITECTURA DE COMPUTADO...
+              </text>
+            </switch>
+          </g>
+          <path d="M 267.5 320 L 282.55 320 L 282.51 343.63" fill="none" stroke="#000000" class="flecha cuerpo id-351"
+            stroke-miterlimit="10" pointer-events="stroke" />
+          <path d="M 282.5 348.88 L 279.01 341.88 L 282.51 343.63 L 286.01 341.89 Z" fill="#000351" stroke="#000000"
+            class="flecha punta id-351" stroke-miterlimit="10" pointer-events="all" />
+          <path d="M 222.5 320 L 210 320 L 210 470 L 362.36 470 L 362.4 483.63" fill="none" stroke="#000000"
+            class="flecha cuerpo id-351" stroke-miterlimit="10" pointer-events="stroke" />
+          <path d="M 362.42 488.88 L 358.9 481.89 L 362.4 483.63 L 365.9 481.87 Z" fill="#000351" stroke="#000000"
+            class="flecha punta id-351" stroke-miterlimit="10" pointer-events="all" />
+          <path d="M 245 320 L 245 400 L 349.55 400 L 349.51 413.63" fill="none" stroke="#000000"
+            class="flecha cuerpo id-351" stroke-miterlimit="10" pointer-events="stroke" />
+          <path d="M 349.5 418.88 L 346.02 411.87 L 349.51 413.63 L 353.02 411.89 Z" fill="#000351" stroke="#000000"
+            class="flecha punta id-351" stroke-miterlimit="10" pointer-events="all" />
+          <rect x="200" y="280" width="90" height="40" fill="#ffffff" stroke="#000000" class="materia rectangulo id-351"
+            pointer-events="all" />
+          <g transform="translate(-0.5 -0.5)">
+            <switch>
+              <foreignObject class="materia texto id-351" style="overflow: visible; text-align: left"
+                pointer-events="none" width="100%" height="100%"
+                requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="
+                      display: flex;
+                      align-items: unsafe center;
+                      justify-content: unsafe center;
+                      width: 88px;
+                      height: 1px;
+                      padding-top: 300px;
+                      margin-left: 201px;
+                    ">
+                  <div style="
+                        box-sizing: border-box;
+                        font-size: 0;
+                        text-align: center;
+                      ">
+                    <div style="
+                          display: inline-block;
+                          font-size: 7px;
+                          font-family: Helvetica;
+                          color: #000000;
+                          line-height: 1.2;
+                          pointer-events: all;
+                          white-space: normal;
+                          word-wrap: normal;
+                        ">
+                      <font style="font-size: 7px">PROBABILIDAD Y ESTADÍSTICA<br /></font>
+                    </div>
+                  </div>
+                </div>
+              </foreignObject>
+              <text x="245" y="302" fill="#000000" font-family="Helvetica" font-size="7px" text-anchor="middle">
+                PROBABILIDAD Y ESTADÍSTIC...
+              </text>
+            </switch>
+          </g>
+          <path d="M 545 320 L 535 320 L 535 335 L 616.36 335 L 616.36 414.19" fill="none" stroke="#000000"
+            class="flecha cuerpo id-1243" stroke-miterlimit="10" pointer-events="stroke" />
+          <path d="M 616.36 419.44 L 612.86 412.44 L 616.36 414.19 L 619.86 412.44 Z" fill="#001243" stroke="#000000"
+            class="flecha punta id-1243" stroke-miterlimit="10" pointer-events="all" />
+          <rect x="455" y="280" width="90" height="40" fill="#ffffff" stroke="#000000"
+            class="materia rectangulo id-1243" pointer-events="all" />
+          <g transform="translate(-0.5 -0.5)">
+            <switch>
+              <foreignObject class="materia texto id-1243" style="overflow: visible; text-align: left"
+                pointer-events="none" width="100%" height="100%"
+                requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="
+                      display: flex;
+                      align-items: unsafe center;
+                      justify-content: unsafe center;
+                      width: 88px;
+                      height: 1px;
+                      padding-top: 300px;
+                      margin-left: 456px;
+                    ">
+                  <div style="
+                        box-sizing: border-box;
+                        font-size: 0;
+                        text-align: center;
+                      ">
+                    <div style="
+                          display: inline-block;
+                          font-size: 7px;
+                          font-family: Helvetica;
+                          color: #000000;
+                          line-height: 1.2;
+                          pointer-events: all;
+                          white-space: normal;
+                          word-wrap: normal;
+                        ">
+                      <font style="font-size: 7px">FUNDAMENTOS DE COMPUTACIÓN<br /></font>
+                    </div>
+                  </div>
+                </div>
+              </foreignObject>
+              <text x="500" y="302" fill="#000000" font-family="Helvetica" font-size="7px" text-anchor="middle">
+                FUNDAMENTOS DE COMPUTACIÓ...
+              </text>
+            </switch>
+          </g>
+          <path d="M 582.5 320 L 582.55 325 L 327.55 325 L 327.51 343.63" fill="none" stroke="#000000"
+            class="flecha cuerpo id-762" stroke-miterlimit="10" pointer-events="stroke" />
+          <path d="M 327.5 348.88 L 324.01 341.88 L 327.51 343.63 L 331.01 341.89 Z" fill="#000762" stroke="#000000"
+            class="flecha punta id-762" stroke-miterlimit="10" pointer-events="all" />
+          <path d="M 627.5 320 L 610 320 L 610 405 L 647.55 405 L 647.52 413.63" fill="none" stroke="#000000"
+            class="flecha cuerpo id-762" stroke-miterlimit="10" pointer-events="stroke" />
+          <path d="M 647.5 418.88 L 644.02 411.87 L 647.52 413.63 L 651.02 411.89 Z" fill="#000762" stroke="#000000"
+            class="flecha punta id-762" stroke-miterlimit="10" pointer-events="all" />
+          <rect x="560" y="280" width="90" height="40" fill="#ffffff" stroke="#000000" class="materia rectangulo id-762"
+            pointer-events="all" />
+          <g transform="translate(-0.5 -0.5)">
+            <switch>
+              <foreignObject class="materia texto id-762" style="overflow: visible; text-align: left"
+                pointer-events="none" width="100%" height="100%"
+                requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="
+                      display: flex;
+                      align-items: unsafe center;
+                      justify-content: unsafe center;
+                      width: 88px;
+                      height: 1px;
+                      padding-top: 300px;
+                      margin-left: 561px;
+                    ">
+                  <div style="
+                        box-sizing: border-box;
+                        font-size: 0;
+                        text-align: center;
+                      ">
+                    <div style="
+                          display: inline-block;
+                          font-size: 7px;
+                          font-family: Helvetica;
+                          color: #000000;
+                          line-height: 1.2;
+                          pointer-events: all;
+                          white-space: normal;
+                          word-wrap: normal;
+                        ">
+                      <font style="font-size: 7px">SISTEMAS OPERATIVOS<br /></font>
+                    </div>
+                  </div>
+                </div>
+              </foreignObject>
+              <text x="605" y="302" fill="#000000" font-family="Helvetica" font-size="7px" text-anchor="middle">
+                SISTEMAS OPERATIVOS&#xa;
+              </text>
+            </switch>
+          </g>
+          <path d="M 282.5 390 L 287.55 390 L 287.51 413.63" fill="none" stroke="#000000" class="flecha cuerpo id-1247"
+            stroke-miterlimit="10" pointer-events="stroke" />
+          <path d="M 287.5 418.88 L 284.01 411.88 L 287.51 413.63 L 291.01 411.89 Z" fill="#001247" stroke="#000000"
+            class="flecha punta id-1247" stroke-miterlimit="10" pointer-events="all" />
+          <rect x="260" y="350" width="90" height="40" fill="#ffffff" stroke="#000000"
+            class="materia rectangulo id-1247" pointer-events="all" />
+          <g transform="translate(-0.5 -0.5)">
+            <switch>
+              <foreignObject class="materia texto id-1247" style="overflow: visible; text-align: left"
+                pointer-events="none" width="100%" height="100%"
+                requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="
+                      display: flex;
+                      align-items: unsafe center;
+                      justify-content: unsafe center;
+                      width: 88px;
+                      height: 1px;
+                      padding-top: 370px;
+                      margin-left: 261px;
+                    ">
+                  <div style="
+                        box-sizing: border-box;
+                        font-size: 0;
+                        text-align: center;
+                      ">
+                    <div style="
+                          display: inline-block;
+                          font-size: 7px;
+                          font-family: Helvetica;
+                          color: #000000;
+                          line-height: 1.2;
+                          pointer-events: all;
+                          white-space: normal;
+                          word-wrap: normal;
+                        ">
+                      <font style="font-size: 7px">COMUNICACIÓN DE DATOS<br /></font>
+                    </div>
+                  </div>
+                </div>
+              </foreignObject>
+              <text x="305" y="372" fill="#000000" font-family="Helvetica" font-size="7px" text-anchor="middle">
+                COMUNICACIÓN DE DATOS&#xa;
+              </text>
+            </switch>
+          </g>
+          <path d="M 522.5 390 L 509.09 390 L 509.11 413.27" fill="none" stroke="#000000" class="flecha cuerpo id-775"
+            stroke-miterlimit="10" pointer-events="stroke" />
+          <path d="M 509.11 418.52 L 505.6 411.52 L 509.11 413.27 L 512.6 411.52 Z" fill="#000775" stroke="#000000"
+            class="flecha punta id-775" stroke-miterlimit="10" pointer-events="all" />
+          <rect x="500" y="350" width="90" height="40" fill="#ffffff" stroke="#000000" class="materia rectangulo id-775"
+            pointer-events="all" />
+          <g transform="translate(-0.5 -0.5)">
+            <switch>
+              <foreignObject class="materia texto id-775" style="overflow: visible; text-align: left"
+                pointer-events="none" width="100%" height="100%"
+                requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="
+                      display: flex;
+                      align-items: unsafe center;
+                      justify-content: unsafe center;
+                      width: 88px;
+                      height: 1px;
+                      padding-top: 370px;
+                      margin-left: 501px;
+                    ">
+                  <div style="
+                        box-sizing: border-box;
+                        font-size: 0;
+                        text-align: center;
+                      ">
+                    <div style="
+                          display: inline-block;
+                          font-size: 7px;
+                          font-family: Helvetica;
+                          color: #000000;
+                          line-height: 1.2;
+                          pointer-events: all;
+                          white-space: normal;
+                          word-wrap: normal;
+                        ">
+                      <font style="font-size: 7px">TEORÍA DE CIRCUITOS ELECTRÓNICOS<br /></font>
+                    </div>
+                  </div>
+                </div>
+              </foreignObject>
+              <text x="545" y="372" fill="#000000" font-family="Helvetica" font-size="7px" text-anchor="middle">
+                TEORÍA DE CIRCUITOS ELECT...
+              </text>
+            </switch>
+          </g>
+          <path d="M 665 390 L 660.91 390 L 660.91 414.19" fill="none" stroke="#000000" class="flecha cuerpo id-779"
+            stroke-miterlimit="10" pointer-events="stroke" />
+          <path d="M 660.91 419.44 L 657.41 412.44 L 660.91 414.19 L 664.41 412.44 Z" fill="#000779" stroke="#000000"
+            class="flecha punta id-779" stroke-miterlimit="10" pointer-events="all" />
+          <path d="M 687.5 390 L 687.55 465 L 407.36 465 L 407.41 483.63" fill="none" stroke="#000000"
+            class="flecha cuerpo id-779" stroke-miterlimit="10" pointer-events="stroke" />
+          <path d="M 407.42 488.88 L 403.9 481.89 L 407.41 483.63 L 410.9 481.87 Z" fill="#000779" stroke="#000000"
+            class="flecha punta id-779" stroke-miterlimit="10" pointer-events="all" />
+          <rect x="620" y="350" width="90" height="40" fill="#ffffff" stroke="#000000" class="materia rectangulo id-779"
+            pointer-events="all" />
+          <g transform="translate(-0.5 -0.5)">
+            <switch>
+              <foreignObject class="materia texto id-779" style="overflow: visible; text-align: left"
+                pointer-events="none" width="100%" height="100%"
+                requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="
+                      display: flex;
+                      align-items: unsafe center;
+                      justify-content: unsafe center;
+                      width: 88px;
+                      height: 1px;
+                      padding-top: 370px;
+                      margin-left: 621px;
+                    ">
+                  <div style="
+                        box-sizing: border-box;
+                        font-size: 0;
+                        text-align: center;
+                      ">
+                    <div style="
+                          display: inline-block;
+                          font-size: 7px;
+                          font-family: Helvetica;
+                          color: #000000;
+                          line-height: 1.2;
+                          pointer-events: all;
+                          white-space: normal;
+                          word-wrap: normal;
+                        ">
+                      <font style="font-size: 7px">LABORATORIO DE MICROPROCESADORES<br /></font>
+                    </div>
+                  </div>
+                </div>
+              </foreignObject>
+              <text x="665" y="372" fill="#000000" font-family="Helvetica" font-size="7px" text-anchor="middle">
+                LABORATORIO DE MICROPROCE...
+              </text>
+            </switch>
+          </g>
+          <rect x="220" y="420" width="90" height="40" fill="#ffffff" stroke="#000000"
+            class="materia rectangulo id-1251" pointer-events="all" />
+          <g transform="translate(-0.5 -0.5)">
+            <switch>
+              <foreignObject class="materia texto id-1251" style="overflow: visible; text-align: left"
+                pointer-events="none" width="100%" height="100%"
+                requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="
+                      display: flex;
+                      align-items: unsafe center;
+                      justify-content: unsafe center;
+                      width: 88px;
+                      height: 1px;
+                      padding-top: 440px;
+                      margin-left: 221px;
+                    ">
+                  <div style="
+                        box-sizing: border-box;
+                        font-size: 0;
+                        text-align: center;
+                      ">
+                    <div style="
+                          display: inline-block;
+                          font-size: 7px;
+                          font-family: Helvetica;
+                          color: #000000;
+                          line-height: 1.2;
+                          pointer-events: all;
+                          white-space: normal;
+                          word-wrap: normal;
+                        ">
+                      <font style="font-size: 7px">REDES DE COMPUTADORAS<br /></font>
+                    </div>
+                  </div>
+                </div>
+              </foreignObject>
+              <text x="265" y="442" fill="#000000" font-family="Helvetica" font-size="7px" text-anchor="middle">
+                REDES DE COMPUTADORAS&#xa;
+              </text>
+            </switch>
+          </g>
+          <rect x="327" y="420" width="90" height="40" fill="#ffffff" stroke="#000000" class="materia rectangulo id-761"
+            pointer-events="all" />
+          <g transform="translate(-0.5 -0.5)">
+            <switch>
+              <foreignObject class="materia texto id-761" style="overflow: visible; text-align: left"
+                pointer-events="none" width="100%" height="100%"
+                requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="
+                      display: flex;
+                      align-items: unsafe center;
+                      justify-content: unsafe center;
+                      width: 88px;
+                      height: 1px;
+                      padding-top: 440px;
+                      margin-left: 328px;
+                    ">
+                  <div style="
+                        box-sizing: border-box;
+                        font-size: 0;
+                        text-align: center;
+                      ">
+                    <div style="
+                          display: inline-block;
+                          font-size: 7px;
+                          font-family: Helvetica;
+                          color: #000000;
+                          line-height: 1.2;
+                          pointer-events: all;
+                          white-space: normal;
+                          word-wrap: normal;
+                        ">
+                      <font style="font-size: 7px">BASES DE DATOS<br /></font>
+                    </div>
+                  </div>
+                </div>
+              </foreignObject>
+              <text x="372" y="442" fill="#000000" font-family="Helvetica" font-size="7px" text-anchor="middle">
+                BASES DE DATOS&#xa;
+              </text>
+            </switch>
+          </g>
+          <path d="M 452.5 460 L 452.55 535 L 265 535 L 265 553.63" fill="none" stroke="#000000"
+            class="flecha cuerpo id-1249" stroke-miterlimit="10" pointer-events="stroke" />
+          <path d="M 265 558.88 L 261.5 551.88 L 265 553.63 L 268.5 551.88 Z" fill="#001249" stroke="#000000"
+            class="flecha punta id-1249" stroke-miterlimit="10" pointer-events="all" />
+          <path d="M 475 460 L 460 460 L 460 550 L 372 550 L 372 553.63" fill="none" stroke="#000000"
+            class="flecha cuerpo id-1249" stroke-miterlimit="10" pointer-events="stroke" />
+          <path d="M 372 558.88 L 368.5 551.88 L 372 553.63 L 375.5 551.88 Z" fill="#001249" stroke="#000000"
+            class="flecha punta id-1249" stroke-miterlimit="10" pointer-events="all" />
+          <rect x="430" y="420" width="90" height="40" fill="#ffffff" stroke="#000000"
+            class="materia rectangulo id-1249" pointer-events="all" />
+          <g transform="translate(-0.5 -0.5)">
+            <switch>
+              <foreignObject class="materia texto id-1249" style="overflow: visible; text-align: left"
+                pointer-events="none" width="100%" height="100%"
+                requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="
+                      display: flex;
+                      align-items: unsafe center;
+                      justify-content: unsafe center;
+                      width: 88px;
+                      height: 1px;
+                      padding-top: 440px;
+                      margin-left: 431px;
+                    ">
+                  <div style="
+                        box-sizing: border-box;
+                        font-size: 0;
+                        text-align: center;
+                      ">
+                    <div style="
+                          display: inline-block;
+                          font-size: 7px;
+                          font-family: Helvetica;
+                          color: #000000;
+                          line-height: 1.2;
+                          pointer-events: all;
+                          white-space: normal;
+                          word-wrap: normal;
+                        ">
+                      <font style="font-size: 7px">ELECTRÓNICA<br /></font>
+                    </div>
+                  </div>
+                </div>
+              </foreignObject>
+              <text x="475" y="442" fill="#000000" font-family="Helvetica" font-size="7px" text-anchor="middle">
+                ELECTRÓNICA&#xa;
+              </text>
+            </switch>
+          </g>
+          <path d="M 647.5 460 L 645 460 L 645 483.63" fill="none" stroke="#000000" class="flecha cuerpo id-1248"
+            stroke-miterlimit="10" pointer-events="stroke" />
+          <path d="M 645 488.88 L 641.5 481.88 L 645 483.63 L 648.5 481.88 Z" fill="#001248" stroke="#000000"
+            class="flecha punta id-1248" stroke-miterlimit="10" pointer-events="all" />
+          <path d="M 602.5 460 L 590 460 L 590 540 L 242.55 540 L 242.51 553.63" fill="none" stroke="#000000"
+            class="flecha cuerpo id-1248" stroke-miterlimit="10" pointer-events="stroke" />
+          <path d="M 242.5 558.88 L 239.02 551.87 L 242.51 553.63 L 246.02 551.89 Z" fill="#001248" stroke="#000000"
+            class="flecha punta id-1248" stroke-miterlimit="10" pointer-events="all" />
+          <path d="M 602.5 460 L 595 460 L 595 545 L 349.55 545 L 349.52 553.63" fill="none" stroke="#000000"
+            class="flecha cuerpo id-1248" stroke-miterlimit="10" pointer-events="stroke" />
+          <path d="M 349.5 558.88 L 346.02 551.87 L 349.52 553.63 L 353.02 551.89 Z" fill="#001248" stroke="#000000"
+            class="flecha punta id-1248" stroke-miterlimit="10" pointer-events="all" />
+          <path d="M 625 460 L 625 470 L 522 470 L 522 483.63" fill="none" stroke="#000000"
+            class="flecha cuerpo id-1248" stroke-miterlimit="10" pointer-events="stroke" />
+          <path d="M 522 488.88 L 518.5 481.88 L 522 483.63 L 525.5 481.88 Z" fill="#001248" stroke="#000000"
+            class="flecha punta id-1248" stroke-miterlimit="10" pointer-events="all" />
+          <rect x="580" y="420" width="90" height="40" fill="#ffffff" stroke="#000000"
+            class="materia rectangulo id-1248" pointer-events="all" />
+          <g transform="translate(-0.5 -0.5)">
+            <switch>
+              <foreignObject class="materia texto id-1248" style="overflow: visible; text-align: left"
+                pointer-events="none" width="100%" height="100%"
+                requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="
+                      display: flex;
+                      align-items: unsafe center;
+                      justify-content: unsafe center;
+                      width: 88px;
+                      height: 1px;
+                      padding-top: 440px;
+                      margin-left: 581px;
+                    ">
+                  <div style="
+                        box-sizing: border-box;
+                        font-size: 0;
+                        text-align: center;
+                      ">
+                    <div style="
+                          display: inline-block;
+                          font-size: 7px;
+                          font-family: Helvetica;
+                          color: #000000;
+                          line-height: 1.2;
+                          pointer-events: all;
+                          white-space: normal;
+                          word-wrap: normal;
+                        ">
+                      <font style="font-size: 7px">DISEÑO Y ARQUITECTURA DE SISTEMAS DE COMPUTACIÓN<br /></font>
+                    </div>
+                  </div>
+                </div>
+              </foreignObject>
+              <text x="625" y="442" fill="#000000" font-family="Helvetica" font-size="7px" text-anchor="middle">
+                DISEÑO Y ARQUITECTURA DE...
+              </text>
+            </switch>
+          </g>
+          <rect x="207" y="490" width="90" height="40" fill="#ffffff" stroke="#000000"
+            class="materia rectangulo id-1255" pointer-events="all" />
+          <g transform="translate(-0.5 -0.5)">
+            <switch>
+              <foreignObject class="materia texto id-1255" style="overflow: visible; text-align: left"
+                pointer-events="none" width="100%" height="100%"
+                requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="
+                      display: flex;
+                      align-items: unsafe center;
+                      justify-content: unsafe center;
+                      width: 88px;
+                      height: 1px;
+                      padding-top: 510px;
+                      margin-left: 208px;
+                    ">
+                  <div style="
+                        box-sizing: border-box;
+                        font-size: 0;
+                        text-align: center;
+                      ">
+                    <div style="
+                          display: inline-block;
+                          font-size: 7px;
+                          font-family: Helvetica;
+                          color: #000000;
+                          line-height: 1.2;
+                          pointer-events: all;
+                          white-space: normal;
+                          word-wrap: normal;
+                        ">
+                      <font style="font-size: 7px">ANÁLISIS NUMÉRICO<br /></font>
+                    </div>
+                  </div>
+                </div>
+              </foreignObject>
+              <text x="252" y="512" fill="#000000" font-family="Helvetica" font-size="7px" text-anchor="middle">
+                ANÁLISIS NUMÉRICO&#xa;
+              </text>
+            </switch>
+          </g>
+          <path d="M 135 530 L 135 623.63" fill="none" stroke="#000000" class="flecha cuerpo id-755"
+            stroke-miterlimit="10" pointer-events="stroke" />
+          <path d="M 135 628.88 L 131.5 621.88 L 135 623.63 L 138.5 621.88 Z" fill="#000755" stroke="#000000"
+            class="flecha punta id-755" stroke-miterlimit="10" pointer-events="all" />
+          <rect x="90" y="490" width="90" height="40" fill="#ffffff" stroke="#000000" class="materia rectangulo id-755"
+            pointer-events="all" />
+          <g transform="translate(-0.5 -0.5)">
+            <switch>
+              <foreignObject class="materia texto id-755" style="overflow: visible; text-align: left"
+                pointer-events="none" width="100%" height="100%"
+                requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="
+                      display: flex;
+                      align-items: unsafe center;
+                      justify-content: unsafe center;
+                      width: 88px;
+                      height: 1px;
+                      padding-top: 510px;
+                      margin-left: 91px;
+                    ">
+                  <div style="
+                        box-sizing: border-box;
+                        font-size: 0;
+                        text-align: center;
+                      ">
+                    <div style="
+                          display: inline-block;
+                          font-size: 7px;
+                          font-family: Helvetica;
+                          color: #000000;
+                          line-height: 1.2;
+                          pointer-events: all;
+                          white-space: normal;
+                          word-wrap: normal;
+                        ">
+                      <font style="font-size: 7px">QUÍMICA<br /></font>
+                    </div>
+                  </div>
+                </div>
+              </foreignObject>
+              <text x="135" y="512" fill="#000000" font-family="Helvetica" font-size="7px" text-anchor="middle">
+                QUÍMICA&#xa;
+              </text>
+            </switch>
+          </g>
+          <rect x="339.92" y="490" width="90" height="40" fill="#ffffff" stroke="#000000"
+            class="materia rectangulo id-1254" pointer-events="all" />
+          <g transform="translate(-0.5 -0.5)">
+            <switch>
+              <foreignObject class="materia texto id-1254" style="overflow: visible; text-align: left"
+                pointer-events="none" width="100%" height="100%"
+                requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="
+                      display: flex;
+                      align-items: unsafe center;
+                      justify-content: unsafe center;
+                      width: 88px;
+                      height: 1px;
+                      padding-top: 510px;
+                      margin-left: 341px;
+                    ">
+                  <div style="
+                        box-sizing: border-box;
+                        font-size: 0;
+                        text-align: center;
+                      ">
+                    <div style="
+                          display: inline-block;
+                          font-size: 7px;
+                          font-family: Helvetica;
+                          color: #000000;
+                          line-height: 1.2;
+                          pointer-events: all;
+                          white-space: normal;
+                          word-wrap: normal;
+                        ">
+                      <font style="font-size: 7px">PROCESAMIENTO DE SEÑALES<br /></font>
+                    </div>
+                  </div>
+                </div>
+              </foreignObject>
+              <text x="385" y="512" fill="#000000" font-family="Helvetica" font-size="7px" text-anchor="middle">
+                PROCESAMIENTO DE SEÑALES&#xa;
+              </text>
+            </switch>
+          </g>
+          <path d="M 499.5 530 L 507.55 530 L 507.51 553.63" fill="none" stroke="#000000" class="flecha cuerpo id-1253"
+            stroke-miterlimit="10" pointer-events="stroke" />
+          <path d="M 507.5 558.88 L 504.01 551.88 L 507.51 553.63 L 511.01 551.89 Z" fill="#001253" stroke="#000000"
+            class="flecha punta id-1253" stroke-miterlimit="10" pointer-events="all" />
+          <path d="M 544.5 530 L 557.55 530 L 557.51 553.63" fill="none" stroke="#000000" class="flecha cuerpo id-1253"
+            stroke-miterlimit="10" pointer-events="stroke" />
+          <path d="M 557.5 558.88 L 554.01 551.88 L 557.51 553.63 L 561.01 551.89 Z" fill="#001253" stroke="#000000"
+            class="flecha punta id-1253" stroke-miterlimit="10" pointer-events="all" />
+          <rect x="477" y="490" width="90" height="40" fill="#ffffff" stroke="#000000"
+            class="materia rectangulo id-1253" pointer-events="all" />
+          <g transform="translate(-0.5 -0.5)">
+            <switch>
+              <foreignObject class="materia texto id-1253" style="overflow: visible; text-align: left"
+                pointer-events="none" width="100%" height="100%"
+                requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="
+                      display: flex;
+                      align-items: unsafe center;
+                      justify-content: unsafe center;
+                      width: 88px;
+                      height: 1px;
+                      padding-top: 510px;
+                      margin-left: 478px;
+                    ">
+                  <div style="
+                        box-sizing: border-box;
+                        font-size: 0;
+                        text-align: center;
+                      ">
+                    <div style="
+                          display: inline-block;
+                          font-size: 7px;
+                          font-family: Helvetica;
+                          color: #000000;
+                          line-height: 1.2;
+                          pointer-events: all;
+                          white-space: normal;
+                          word-wrap: normal;
+                        ">
+                      <font style="font-size: 7px">INGENIERÍA DE CALIDAD<br /></font>
+                    </div>
+                  </div>
+                </div>
+              </foreignObject>
+              <text x="522" y="512" fill="#000000" font-family="Helvetica" font-size="7px" text-anchor="middle">
+                INGENIERÍA DE CALIDAD&#xa;
+              </text>
+            </switch>
+          </g>
+          <rect x="600" y="490" width="90" height="40" fill="#ffffff" stroke="#000000" class="materia rectangulo id-763"
+            pointer-events="all" />
+          <g transform="translate(-0.5 -0.5)">
+            <switch>
+              <foreignObject class="materia texto id-763" style="overflow: visible; text-align: left"
+                pointer-events="none" width="100%" height="100%"
+                requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="
+                      display: flex;
+                      align-items: unsafe center;
+                      justify-content: unsafe center;
+                      width: 88px;
+                      height: 1px;
+                      padding-top: 510px;
+                      margin-left: 601px;
+                    ">
+                  <div style="
+                        box-sizing: border-box;
+                        font-size: 0;
+                        text-align: center;
+                      ">
+                    <div style="
+                          display: inline-block;
+                          font-size: 7px;
+                          font-family: Helvetica;
+                          color: #000000;
+                          line-height: 1.2;
+                          pointer-events: all;
+                          white-space: normal;
+                          word-wrap: normal;
+                        ">
+                      <font style="font-size: 7px">CONSTRUCCIÓN DE SISTEMAS DE COMPUTACIÓN<br /></font>
+                    </div>
+                  </div>
+                </div>
+              </foreignObject>
+              <text x="645" y="512" fill="#000000" font-family="Helvetica" font-size="7px" text-anchor="middle">
+                CONSTRUCCIÓN DE SISTEMAS...
+              </text>
+            </switch>
+          </g>
+          <rect x="327" y="560" width="90" height="40" fill="#ffffff" stroke="#000000"
+            class="materia rectangulo id-1259" pointer-events="all" />
+          <g transform="translate(-0.5 -0.5)">
+            <switch>
+              <foreignObject class="materia texto id-1259" style="overflow: visible; text-align: left"
+                pointer-events="none" width="100%" height="100%"
+                requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="
+                      display: flex;
+                      align-items: unsafe center;
+                      justify-content: unsafe center;
+                      width: 88px;
+                      height: 1px;
+                      padding-top: 580px;
+                      margin-left: 328px;
+                    ">
+                  <div style="
+                        box-sizing: border-box;
+                        font-size: 0;
+                        text-align: center;
+                      ">
+                    <div style="
+                          display: inline-block;
+                          font-size: 7px;
+                          font-family: Helvetica;
+                          color: #000000;
+                          line-height: 1.2;
+                          pointer-events: all;
+                          white-space: normal;
+                          word-wrap: normal;
+                        ">
+                      <font style="font-size: 7px">SISTEMAS EMBEBIDOS<br /></font>
+                    </div>
+                  </div>
+                </div>
+              </foreignObject>
+              <text x="372" y="582" fill="#000000" font-family="Helvetica" font-size="7px" text-anchor="middle">
+                SISTEMAS EMBEBIDOS&#xa;
+              </text>
+            </switch>
+          </g>
+          <rect x="220" y="560" width="90" height="40" fill="#ffffff" stroke="#000000" class="materia rectangulo id-766"
+            pointer-events="all" />
+          <g transform="translate(-0.5 -0.5)">
+            <switch>
+              <foreignObject class="materia texto id-766" style="overflow: visible; text-align: left"
+                pointer-events="none" width="100%" height="100%"
+                requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="
+                      display: flex;
+                      align-items: unsafe center;
+                      justify-content: unsafe center;
+                      width: 88px;
+                      height: 1px;
+                      padding-top: 580px;
+                      margin-left: 221px;
+                    ">
+                  <div style="
+                        box-sizing: border-box;
+                        font-size: 0;
+                        text-align: center;
+                      ">
+                    <div style="
+                          display: inline-block;
+                          font-size: 7px;
+                          font-family: Helvetica;
+                          color: #000000;
+                          line-height: 1.2;
+                          pointer-events: all;
+                          white-space: normal;
+                          word-wrap: normal;
+                        ">
+                      <font style="font-size: 7px">SISTEMAS DE TIEMPO REAL<br /></font>
+                    </div>
+                  </div>
+                </div>
+              </foreignObject>
+              <text x="265" y="582" fill="#000000" font-family="Helvetica" font-size="7px" text-anchor="middle">
+                SISTEMAS DE TIEMPO REAL&#xa;
+              </text>
+            </switch>
+          </g>
+          <rect x="440" y="560" width="90" height="40" fill="#ffffff" stroke="#000000"
+            class="materia rectangulo id-1258" pointer-events="all" />
+          <g transform="translate(-0.5 -0.5)">
+            <switch>
+              <foreignObject class="materia texto id-1258" style="overflow: visible; text-align: left"
+                pointer-events="none" width="100%" height="100%"
+                requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="
+                      display: flex;
+                      align-items: unsafe center;
+                      justify-content: unsafe center;
+                      width: 88px;
+                      height: 1px;
+                      padding-top: 580px;
+                      margin-left: 441px;
+                    ">
+                  <div style="
+                        box-sizing: border-box;
+                        font-size: 0;
+                        text-align: center;
+                      ">
+                    <div style="
+                          display: inline-block;
+                          font-size: 7px;
+                          font-family: Helvetica;
+                          color: #000000;
+                          line-height: 1.2;
+                          pointer-events: all;
+                          white-space: normal;
+                          word-wrap: normal;
+                        ">
+                      <font style="font-size: 7px">INGENIERÍA DE REQUERIMIENTOS<br /></font>
+                    </div>
+                  </div>
+                </div>
+              </foreignObject>
+              <text x="485" y="582" fill="#000000" font-family="Helvetica" font-size="7px" text-anchor="middle">
+                INGENIERÍA DE REQUERIMIEN...
+              </text>
+            </switch>
+          </g>
+          <rect x="535" y="560" width="90" height="40" fill="#ffffff" stroke="#000000" class="materia rectangulo id-769"
+            pointer-events="all" />
+          <g transform="translate(-0.5 -0.5)">
+            <switch>
+              <foreignObject class="materia texto id-769" style="overflow: visible; text-align: left"
+                pointer-events="none" width="100%" height="100%"
+                requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="
+                      display: flex;
+                      align-items: unsafe center;
+                      justify-content: unsafe center;
+                      width: 88px;
+                      height: 1px;
+                      padding-top: 580px;
+                      margin-left: 536px;
+                    ">
+                  <div style="
+                        box-sizing: border-box;
+                        font-size: 0;
+                        text-align: center;
+                      ">
+                    <div style="
+                          display: inline-block;
+                          font-size: 7px;
+                          font-family: Helvetica;
+                          color: #000000;
+                          line-height: 1.2;
+                          pointer-events: all;
+                          white-space: normal;
+                          word-wrap: normal;
+                        ">
+                      <font style="font-size: 7px">INGENIERÍA DE SOFTWARE<br /></font>
+                    </div>
+                  </div>
+                </div>
+              </foreignObject>
+              <text x="580" y="582" fill="#000000" font-family="Helvetica" font-size="7px" text-anchor="middle">
+                INGENIERÍA DE SOFTWARE&#xa;
+              </text>
+            </switch>
+          </g>
+          <path d="M 725 600 L 725 623.63" fill="none" stroke="#000000" class="flecha cuerpo id-1256"
+            stroke-miterlimit="10" pointer-events="stroke" />
+          <path d="M 725 628.88 L 721.5 621.88 L 725 623.63 L 728.5 621.88 Z" fill="#001256" stroke="#000000"
+            class="flecha punta id-1256" stroke-miterlimit="10" pointer-events="all" />
+          <rect x="680" y="560" width="90" height="40" fill="#ffffff" stroke="#000000"
+            class="materia rectangulo id-1256" pointer-events="all" />
+          <g transform="translate(-0.5 -0.5)">
+            <switch>
+              <foreignObject class="materia texto id-1256" style="overflow: visible; text-align: left"
+                pointer-events="none" width="100%" height="100%"
+                requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="
+                      display: flex;
+                      align-items: unsafe center;
+                      justify-content: unsafe center;
+                      width: 88px;
+                      height: 1px;
+                      padding-top: 580px;
+                      margin-left: 681px;
+                    ">
+                  <div style="
+                        box-sizing: border-box;
+                        font-size: 0;
+                        text-align: center;
+                      ">
+                    <div style="
+                          display: inline-block;
+                          font-size: 7px;
+                          font-family: Helvetica;
+                          color: #000000;
+                          line-height: 1.2;
+                          pointer-events: all;
+                          white-space: normal;
+                          word-wrap: normal;
+                        ">
+                      <font style="font-size: 7px">ORGANIZACIÓN DE PROYECTOS<br /></font>
+                    </div>
+                  </div>
+                </div>
+              </foreignObject>
+              <text x="725" y="582" fill="#000000" font-family="Helvetica" font-size="7px" text-anchor="middle">
+                ORGANIZACIÓN DE PROYECTOS&#xa;
+              </text>
+            </switch>
+          </g>
+          <rect x="220" y="630" width="90" height="40" fill="#ffffff" stroke="#000001" class="materia rectangulo id-1"
+            pointer-events="all" />
+          <g transform="translate(-0.5 -0.5)">
+            <switch>
+              <foreignObject class="materia texto id-1" style="overflow: visible; text-align: left"
+                pointer-events="none" width="100%" height="100%"
+                requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="
+                      display: flex;
+                      align-items: unsafe center;
+                      justify-content: unsafe center;
+                      width: 88px;
+                      height: 1px;
+                      padding-top: 650px;
+                      margin-left: 221px;
+                    ">
+                  <div style="
+                        box-sizing: border-box;
+                        font-size: 0;
+                        text-align: center;
+                      ">
+                    <div style="
+                          display: inline-block;
+                          font-size: 7px;
+                          font-family: Helvetica;
+                          color: #000000;
+                          line-height: 1.2;
+                          pointer-events: all;
+                          white-space: normal;
+                          word-wrap: normal;
+                        ">
+                      <font style="font-size: 7px">METODOLOGÍA DE LA INVESTIGACIÓN<br /></font>
+                    </div>
+                  </div>
+                </div>
+              </foreignObject>
+              <text x="265" y="652" fill="#000000" font-family="Helvetica" font-size="7px" text-anchor="middle">
+                METODOLOGÍA DE LA INVESTI...
+              </text>
+            </switch>
+          </g>
+          <rect x="90" y="630" width="90" height="40" fill="#ffffff" stroke="#000000" class="materia rectangulo id-1263"
+            pointer-events="all" />
+          <g transform="translate(-0.5 -0.5)">
+            <switch>
+              <foreignObject class="materia texto id-1263" style="overflow: visible; text-align: left"
+                pointer-events="none" width="100%" height="100%"
+                requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="
+                      display: flex;
+                      align-items: unsafe center;
+                      justify-content: unsafe center;
+                      width: 88px;
+                      height: 1px;
+                      padding-top: 650px;
+                      margin-left: 91px;
+                    ">
+                  <div style="
+                        box-sizing: border-box;
+                        font-size: 0;
+                        text-align: center;
+                      ">
+                    <div style="
+                          display: inline-block;
+                          font-size: 7px;
+                          font-family: Helvetica;
+                          color: #000000;
+                          line-height: 1.2;
+                          pointer-events: all;
+                          white-space: normal;
+                          word-wrap: normal;
+                        ">
+                      <font style="font-size: 7px">SEGURIDAD, SALUD OCUPACIONAL Y MEDIO AMBIENTE<br /></font>
+                    </div>
+                  </div>
+                </div>
+              </foreignObject>
+              <text x="135" y="652" fill="#000000" font-family="Helvetica" font-size="7px" text-anchor="middle">
+                SEGURIDAD, SALUD OCUPACIO...
+              </text>
+            </switch>
+          </g>
+          <rect x="330" y="630" width="90" height="40" fill="#ffffff" stroke="#000000"
+            class="materia rectangulo id-1262" pointer-events="all" />
+          <g transform="translate(-0.5 -0.5)">
+            <switch>
+              <foreignObject class="materia texto id-1262" style="overflow: visible; text-align: left"
+                pointer-events="none" width="100%" height="100%"
+                requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="
+                      display: flex;
+                      align-items: unsafe center;
+                      justify-content: unsafe center;
+                      width: 88px;
+                      height: 1px;
+                      padding-top: 650px;
+                      margin-left: 331px;
+                    ">
+                  <div style="
+                        box-sizing: border-box;
+                        font-size: 0;
+                        text-align: center;
+                      ">
+                    <div style="
+                          display: inline-block;
+                          font-size: 7px;
+                          font-family: Helvetica;
+                          color: #000000;
+                          line-height: 1.2;
+                          pointer-events: all;
+                          white-space: normal;
+                          word-wrap: normal;
+                        ">
+                      <font style="font-size: 7px">ECONOMÍA Y LEGISLACÍON<br /></font>
+                    </div>
+                  </div>
+                </div>
+              </foreignObject>
+              <text x="375" y="652" fill="#000000" font-family="Helvetica" font-size="7px" text-anchor="middle">
+                ECONOMÍA Y LEGISLACÍON&#xa;
+              </text>
+            </switch>
+          </g>
+          <rect x="480" y="630" width="90" height="40" fill="#ffffff" stroke="#000000" class="materia rectangulo id-832"
+            pointer-events="all" />
+          <g transform="translate(-0.5 -0.5)">
+            <switch>
+              <foreignObject class="materia texto id-832" style="overflow: visible; text-align: left"
+                pointer-events="none" width="100%" height="100%"
+                requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="
+                      display: flex;
+                      align-items: unsafe center;
+                      justify-content: unsafe center;
+                      width: 88px;
+                      height: 1px;
+                      padding-top: 650px;
+                      margin-left: 481px;
+                    ">
+                  <div style="
+                        box-sizing: border-box;
+                        font-size: 0;
+                        text-align: center;
+                      ">
+                    <div style="
+                          display: inline-block;
+                          font-size: 7px;
+                          font-family: Helvetica;
+                          color: #000000;
+                          line-height: 1.2;
+                          pointer-events: all;
+                          white-space: normal;
+                          word-wrap: normal;
+                        ">
+                      <font style="font-size: 7px">PRÁCTICA PROFESIONAL SUPERVISADA<br /></font>
+                    </div>
+                  </div>
+                </div>
+              </foreignObject>
+              <text x="525" y="652" fill="#000000" font-family="Helvetica" font-size="7px" text-anchor="middle">
+                PRÁCTICA PROFESIONAL SUPE...
+              </text>
+            </switch>
+          </g>
+          <rect x="680" y="630" width="90" height="40" fill="#ffffff" stroke="#000000" class="materia rectangulo id-785"
+            pointer-events="all" />
+          <g transform="translate(-0.5 -0.5)">
+            <switch>
+              <foreignObject class="materia texto id-785" style="overflow: visible; text-align: left"
+                pointer-events="none" width="100%" height="100%"
+                requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="
+                      display: flex;
+                      align-items: unsafe center;
+                      justify-content: unsafe center;
+                      width: 88px;
+                      height: 1px;
+                      padding-top: 650px;
+                      margin-left: 681px;
+                    ">
+                  <div style="
+                        box-sizing: border-box;
+                        font-size: 0;
+                        text-align: center;
+                      ">
+                    <div style="
+                          display: inline-block;
+                          font-size: 7px;
+                          font-family: Helvetica;
+                          color: #000000;
+                          line-height: 1.2;
+                          pointer-events: all;
+                          white-space: normal;
+                          word-wrap: normal;
+                        ">
+                      <font style="font-size: 7px">TRABAJO FINAL INTEGRADOR<br /></font>
+                    </div>
+                  </div>
+                </div>
+              </foreignObject>
+              <text x="725" y="652" fill="#000000" font-family="Helvetica" font-size="7px" text-anchor="middle">
+                TRABAJO FINAL INTEGRADOR&#xa;
+              </text>
+            </switch>
+          </g>
+          <path d="M 805 75 L 805 95 L 805 85 L 805 98.63" fill="none" stroke="#000000" class="flecha cuerpo id-759"
+            stroke-miterlimit="10" pointer-events="stroke" />
+          <path d="M 805 103.88 L 801.5 96.88 L 805 98.63 L 808.5 96.88 Z" fill="#000759" stroke="#000000"
+            class="flecha punta id-759" stroke-miterlimit="10" pointer-events="all" />
+          <rect x="760" y="35" width="90" height="40" fill="#ffffff" stroke="#000000" class="materia rectangulo id-759"
+            pointer-events="all" />
+          <g transform="translate(-0.5 -0.5)">
+            <switch>
+              <foreignObject class="materia texto id-759" style="overflow: visible; text-align: left"
+                pointer-events="none" width="100%" height="100%"
+                requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="
+                      display: flex;
+                      align-items: unsafe center;
+                      justify-content: unsafe center;
+                      width: 88px;
+                      height: 1px;
+                      padding-top: 55px;
+                      margin-left: 761px;
+                    ">
+                  <div style="
+                        box-sizing: border-box;
+                        font-size: 0;
+                        text-align: center;
+                      ">
+                    <div style="
+                          display: inline-block;
+                          font-size: 7px;
+                          font-family: Helvetica;
+                          color: #000000;
+                          line-height: 1.2;
+                          pointer-events: all;
+                          white-space: normal;
+                          word-wrap: normal;
+                        ">
+                      <font style="font-size: 7px">INGLÉS BÁSICO</font>
+                    </div>
+                  </div>
+                </div>
+              </foreignObject>
+              <text x="805" y="57" fill="#000000" font-family="Helvetica" font-size="7px" text-anchor="middle">
+                INGLÉS BÁSICO
+              </text>
+            </switch>
+          </g>
+          <rect x="760" y="105" width="90" height="40" fill="#ffffff" stroke="#000000" class="materia rectangulo id-765"
+            pointer-events="all" />
+          <g transform="translate(-0.5 -0.5)">
+            <switch>
+              <foreignObject class="materia texto id-765" style="overflow: visible; text-align: left"
+                pointer-events="none" width="100%" height="100%"
+                requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="
+                      display: flex;
+                      align-items: unsafe center;
+                      justify-content: unsafe center;
+                      width: 88px;
+                      height: 1px;
+                      padding-top: 125px;
+                      margin-left: 761px;
+                    ">
+                  <div style="
+                        box-sizing: border-box;
+                        font-size: 0;
+                        text-align: center;
+                      ">
+                    <div style="
+                          display: inline-block;
+                          font-size: 7px;
+                          font-family: Helvetica;
+                          color: #000000;
+                          line-height: 1.2;
+                          pointer-events: all;
+                          white-space: normal;
+                          word-wrap: normal;
+                        ">
+                      <font style="font-size: 7px">INGLÉS TÉCNICO</font>
+                    </div>
+                  </div>
+                </div>
+              </foreignObject>
+              <text x="805" y="127" fill="#000000" font-family="Helvetica" font-size="7px" text-anchor="middle">
+                INGLÉS TÉCNICO
+              </text>
+            </switch>
+          </g>
+        </g>
+      </svg>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
