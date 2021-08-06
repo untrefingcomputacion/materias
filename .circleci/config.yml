@@ -7,6 +7,8 @@ orbs:
 workflows:
   sample:
     jobs:
+      - node/install-packages:
+          pkg-manager: yarn
       - node/test:
           version: '15.1'
           # This is the node version to use for the `cimg/node` tag
