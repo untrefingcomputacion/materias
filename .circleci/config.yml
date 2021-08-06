@@ -34,6 +34,8 @@ jobs:
     steps:
       - attach_workspace:
           at: .
+      - run: mkdir -p ~/.ssh      
+      - run: ssh-keyscan github.com >> ~/.ssh/known_hosts    
       - add_ssh_keys:
           fingerprints:
             - "ca:b5:0f:98:65:d1:a2:b3:58:2a:44:8a:b5:7c:bf:d1"
