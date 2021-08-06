@@ -34,6 +34,9 @@ jobs:
     steps:
       - attach_workspace:
           at: .
+      - add_ssh_keys:
+          fingerprints:
+            - "ca:b5:0f:98:65:d1:a2:b3:58:2a:44:8a:b5:7c:bf:d1"
       - run:
           name: Deploy
           command: yarn deploy
@@ -45,15 +48,12 @@ workflows:
       - test:
           requires:
             - install_dependencies
-  install_dependencies_test_and_deploy:
-    jobs:
-      - install_dependencies
-      - test:
-          requires:
-            - install_dependencies
       - deploy:
           filters:
             branches:
+              only: main 
+          requires:
+            - test
               only: main 
           requires:
             - test
