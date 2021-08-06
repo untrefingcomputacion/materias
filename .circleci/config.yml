@@ -3,11 +3,15 @@ version: 2.1
 orbs:
   node: circleci/node@4.6.0
 
+executors:
+  node:
+    docker:
+      - image: cimg/node:current
+
 
 jobs:
   build:
-    docker:
-      - image: cimg/node:current
+    executor: node
     steps:
       - checkout
       - node/install-packages:
@@ -18,8 +22,7 @@ jobs:
           paths:
             - .
   test:
-    docker:
-      - image: cimg/node:current
+    executor: node
     steps:
       - attach_workspace:
           at: .
